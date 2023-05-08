@@ -1,0 +1,652 @@
+/* PALETA DE COLORES
+ghost-white: rgba(251, 251, 255);
+black: rgba(0, 0, 0);
+red: rgba(255, 0, 0);
+verde: rgba(0, 217, 80);
+violeta: rgba(171, 39, 204); */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(251, 251, 255);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* *========= ESTILOS HEADER ========= */
+header{
+    margin-top: 1%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    align-items: center;
+}
+
+.header__link--img{
+    width: 65%;
+}
+
+.header__navbar{
+    width: 100%;
+    height: 3rem;
+    background-color: rgb(255, 0, 0);
+    border-radius: 1rem;
+    border-bottom: 0.32rem solid black;
+}
+
+.header__navbar__list{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 0.9rem;
+    list-style: none;
+}
+
+.header__navbar__list--item{
+    margin: auto;
+}
+
+.header__navbar__list--item--link{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 110%;
+    font-weight: bold;
+    padding: 0.6rem 0.9rem 1.14rem 0.9rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    transition: 0.3s;
+}
+
+.header__navbar__list--item--link:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+}
+
+.paginaActual{
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+}
+
+/* *========= ESTILOS MAIN ========= */
+
+/* !========= CARRUSEL + ANIMACION ========= */
+.carrusel{
+    width: 100%;
+    margin: 0 auto 0;
+    overflow: hidden;
+    margin-bottom: 3%;
+}
+
+.carrusel__list{
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: slide 16s infinite alternate ease-in-out;
+}
+
+.carrusel__list--item{
+    list-style: none;
+    width: 100%;
+}
+
+.carrusel__list--item--img{
+    width: 100%;
+}
+
+@keyframes slide{
+    0% {margin-left: 0%;}
+    20% {margin-left: 0%;}
+
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+    75% {margin-left: -300%;}
+    95% {margin-left: -300%;}
+}
+/* !======================================== */
+
+/* Organizacion de noticias */
+
+.principal{
+    width: 100%;
+    height: 25rem;
+    display: flex;
+    margin-bottom: 1%;
+}
+
+.principal__noticias{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.principal__noticias::-webkit-scrollbar{
+    width: 0.5rem;
+}
+
+.principal__noticias::-webkit-scrollbar-thumb{
+    background-color: red;
+}
+
+.principal__noticias--title{
+    margin-left: 1rem;
+    font-size: 2rem;
+    color: red;
+}
+
+.principal__noticias--contenedor{
+    display: grid;
+    grid-template-columns: 10% 70% 20%;
+    grid-template-rows: repeat(2, min-content);
+    grid-template-areas: 
+    "title    title    img"
+    "descript descript img"
+    ;
+    padding: 1rem;
+}
+
+.principal__noticias--contenedor h2{
+    grid-area: title;
+}
+
+.principal__noticias--contenedor p{
+    grid-area: descript;
+}
+
+.principal__noticias--contenedor img{
+    grid-area: img;
+    margin: auto;
+}
+
+/* Organizacion de Tabla */
+
+.principal__tabla{
+    margin: 0.5rem;
+    border: solid 0.2rem red;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, min-content);
+    grid-template-areas: 
+    "table-title table-title ..."
+    "column1     column2     column3"
+    ;
+}
+
+.principal__tabla--title{
+    grid-area: table-title;
+    padding: 1rem 0 0.4rem 1rem ;
+}
+
+.columnPos{
+    grid-area: column1;
+}
+
+.columnPil{
+    grid-area: column2;
+}
+
+.columnPun{
+    grid-area: column3;
+}
+
+.principal__tabla--column{
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+}
+
+.principal__tabla--column h5{
+    padding-bottom: 0.5rem;
+    color: red;
+}
+
+.principal__tabla--column h6{
+    padding: 0.08rem;
+}
+
+
+/* *========= ESTILOS FOOTER ========= */
+
+footer{
+    margin-top: 1%;
+    height: 5rem;
+    background-color: rgb(0, 0, 0);
+    padding-top: 1%;
+    border-left: solid 0.5rem red;
+    border-bottom: solid 0.5rem red;
+    border-bottom-left-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer__info--us{
+    color: rgb(251, 251, 255);
+    margin-left: 1rem;
+}
+
+.footer__info--copyright{
+    color: rgb(138, 138, 141);
+    margin-left: 1rem;
+}
+
+.footer__redes{
+    margin: auto;
+    display: flex;
+}
+
+.footer__redes--img{
+    width: 2rem;
+    padding: 1rem;
+    transition: width 0.2s linear;
+}
+
+.footer__redes--img:hover{
+    width: 2.5rem;
+}
+
+
+/* ?====================== INICIO DE ESTILOS DEL RESTO DE PAGINAS ======================= */
+
+/* *====================== MAIN PAGINA NOTICIAS ======================= */
+
+.main__noticias{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: repeat(2, min-content);
+    grid-template-areas: 
+    "noticiaPrincipal noticiaPrincipal ubi1 ubi2"
+    "ubi3             ubi4             ubi5 ubi6"
+    ;
+    margin-bottom: 2%;
+}
+
+/* Estilos + Ubicacion de la noticia principal */
+
+.main__noticia__principal{
+    height: 18rem;
+    grid-area: noticiaPrincipal;
+    border-right: solid 0.3rem red;
+    border-bottom: solid 0.3rem red;
+    border-bottom-right-radius: 1rem;
+    padding: 1rem;
+    transition: 0.3s;
+}
+
+.main__noticia__principal a{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: black;
+}
+
+.main__noticia__principal img{
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+}
+
+.main__noticia__principal--text h2{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.main__noticia__principal--text p{
+    font-size: larger;
+    margin-bottom: 1rem;
+}
+
+.main__noticia__principal:hover{
+    filter: brightness(1.15);
+    box-shadow: 2px 2px 10px 1px black;
+}
+
+/* Estilos + Ubicacion de las cards noticias */
+
+.card1{
+    grid-area: ubi1;
+}
+
+.card2{
+    grid-area: ubi2;
+}
+
+.card3{
+    grid-area: ubi3;
+}
+
+.card4{
+    grid-area: ubi4;
+}
+
+.card5{
+    grid-area: ubi5;
+}
+
+.card6{
+    grid-area: ubi6;
+}
+
+.main__noticia__card{
+    border-left: solid 0.1rem rgb(168, 168, 168);
+    border-top: solid 0.1rem rgb(168, 168, 168);
+    border-top-left-radius: 1rem;
+    padding: 1rem;
+    margin: 2%;
+    transition: 0.3s;
+}
+
+.main__noticia__card--link{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.main__noticia__card--img{
+    width: 90%;
+    height: 7rem;
+    align-self: center;
+    object-fit: cover;
+}
+
+.main__noticia__card--text{
+    margin: 5% 0 0 5%;
+}
+
+.main__noticia__card--text h3{
+    margin-top: 3%;
+    margin-bottom: 15%;
+}
+
+.main__noticia__card:hover{
+    border-left: solid 0.1rem red;
+    border-top: solid 0.1rem red;
+    box-shadow: 2px 2px 10px 1px black;
+}
+
+/* *====================== MAIN PAGINA RESULTADOS ======================= */
+
+.main__select{
+    display: flex;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+.main__select--title{
+    padding-right: 2rem;
+}
+
+.main__select--selector{
+    width: 15%;
+    padding: 0.3rem;
+}
+
+.main__resultados{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-areas: 
+    "circuit posTable"
+    ;
+    border: solid 0.2rem red;
+    border-radius: 1rem;
+    filter: brightness(30%);
+    transition: linear 0.2s;
+}
+
+.main__resultados:hover{
+    box-shadow: 0 0 15px 3px red;
+    filter: brightness(100%);
+}
+
+.main__resultados--circuitName{
+    grid-area: circuit;
+    height: 100%;
+    background-image: url("./assets/imgs/bahrein--circuit.jpg");
+    background-position: center;
+    background-size: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 0.8rem;
+    border-bottom-left-radius: 0.8rem;
+    transition: linear 0.2s;
+}
+
+.main__resultados:hover > .main__resultados--circuitName{
+    background-size: 103%;
+}
+
+.main__resultados--circuitName--text{
+    margin: 1rem;
+    text-align: center;
+
+}
+
+.main__resultados--circuitName--text h3{
+    color: white;
+    font-style: italic;
+    font-size: 2rem;
+}
+
+.main__resultados--circuitName--img{
+    justify-content: center;
+    text-align: center;
+}
+
+
+.main__resultados--circuitName--img img{
+    width: 50%;
+    border-radius: 1rem;
+}
+
+
+.main__resultados--tabla{
+    grid-area: posTable;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main__resultados--tabla--datos{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+}
+
+.main__resultados--tabla--datos h5{
+    padding-top: 0.5rem;
+}
+
+.main__resultados--tabla--datos--vueltaRapida{
+    color: rgba(171, 39, 204);
+}
+
+/* *====================== MAIN PAGINA POSICIONES ======================= */
+
+.main__posiciones__tabla{
+    width: 90%;
+    display: flex;
+    margin: auto;
+}
+
+/* TABLA CAMPEONATO PILOTOS */
+
+.main__posiciones__tabla--pilotos{
+    width: 60%;
+    border: solid 0.2rem red;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, min-content);
+    grid-template-areas: 
+    "CdPTitle"
+    "CdPColumn"
+    ;
+}
+
+.tabla--pilotos--title{
+    grid-area: CdPTitle;
+}
+
+.tabla--pilotos--columns{
+    grid-area: CdPColumn;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2%;
+}
+
+
+.main__posiciones__tabla--pilotos--column{
+    display: flex;
+    flex-direction: column;
+}
+
+.main__posiciones__tabla--pilotos--column h3{
+    padding: 0.3rem;
+    padding-right: 0;
+}
+
+.main__posiciones__tabla--pilotos--column h5{
+    padding: 0.3rem;
+    padding-right: 0;
+    border-top: solid 0.2rem rgb(255, 104, 104);
+}
+
+/* TABLA CAMPEONATO CONSTRUCTORES */
+
+.main__posiciones__tabla--constructores{
+    width: 40%;
+    height: 50%;
+    border: solid 0.2rem red;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1%;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, min-content);
+    grid-template-areas: 
+    "CdCTitle"
+    "CdCColumn"
+    ;
+}
+
+.tabla--constructores--title{
+    grid-area: CdCTitle;
+}
+
+.tabla--constructores--columns{
+    grid-area: CdCColumn;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2%;
+}
+
+.main__posiciones__tabla--constructores--column{
+    display: flex;
+    flex-direction: column;
+}
+
+.main__posiciones__tabla--constructores--column h3{
+    padding: 0.3rem;
+    padding-right: 0;
+}
+
+.main__posiciones__tabla--constructores--column h5{
+    padding: 0.3rem;
+    padding-right: 0;
+    border-top: solid 0.2rem rgb(255, 104, 104);
+}
+
+
+/* *====================== MAIN PAGINA LOGIN ======================= */
+
+.main__login__contenedor{
+    width: 60%;
+    margin: auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.main__login__contenedor--img{
+    width: 10%;
+    padding: 1rem;
+}
+
+.main__login__contenedor--fieldset{
+    width: 75%;
+    height: 16rem;
+    margin-bottom: 5%;
+    border: solid 0.2rem red;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.main__login__contenedor--fieldset legend{
+    padding: 0 0.5rem 0 0.5rem;
+    color: rgb(251, 251, 255);
+    background-color: red;
+    border: solid 0.2rem red;
+    border-radius: 1rem;
+}
+
+.main__login__contenedor--fieldset--form{
+    margin: 5%;
+}
+
+.main__login__contenedor--fieldset--form--label{
+    margin: 2%;
+}
+
+.main__login__contenedor--fieldset--form--input{
+    width: 100%;
+    margin: 2%;
+    font-size: large;
+    border: none;
+    background-color: rgb(251, 251, 255);
+    border-bottom: solid 0.1rem red;
+    color: rgb(43, 43, 43);
+}
+
+.main__login__contenedor--fieldset--form--input:focus{
+    outline: none;
+}
+
+.main__login__contenedor--fieldset--form--submit{
+    margin-top: 2%;
+    padding: 0.5rem;
+    color: rgb(251, 251, 255);
+    background-color: black;
+    border-radius: 0.5rem;
+    transition: linear 0.2s;
+}
+
+.main__login__contenedor--fieldset--form--submit:hover{
+    cursor: pointer;
+    background-color: red;
+    transform: scale(1.1);
+}
