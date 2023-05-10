@@ -26,7 +26,6 @@ header{
 
 .header__navbar{
     width: 100%;
-    height: 5rem;
     border-radius: 1rem;
     border-bottom: 0.32rem solid black;
     background-color: red;
@@ -59,42 +58,8 @@ header{
 
 /* !========= CARRUSEL + ANIMACION ========= */
 .carrusel{
-    width: 100%;
-    margin: 0 auto 0;
-    overflow: hidden;
     margin-bottom: 3%;
 }
-
-.carrusel__list{
-    display: flex;
-    padding: 0;
-    width: 400%;
-    animation: slide 16s infinite alternate ease-in-out;
-}
-
-.carrusel__list--item{
-    list-style: none;
-    width: 100%;
-}
-
-.carrusel__list--item--img{
-    width: 100%;
-}
-
-@keyframes slide{
-    0% {margin-left: 0%;}
-    20% {margin-left: 0%;}
-
-    25% {margin-left: -100%;}
-    45% {margin-left: -100%;}
-
-    50% {margin-left: -200%;}
-    70% {margin-left: -200%;}
-
-    75% {margin-left: -300%;}
-    95% {margin-left: -300%;}
-}
-/* !======================================== */
 
 /* Organizacion de noticias */
 
@@ -639,10 +604,14 @@ footer{
 /* ?============== RESPONSIVE ============== */
 
 /* header */
+@media screen and (min-width: 991px){ /* a partir de este punto aparece el menu hamburguesa en el header */
+    .header__navbar{
+        height: 5rem;
+    }
+}
 
 @media screen and (max-width: 768px){
     .header__navbar{
         height: 100%;
     }
-
 }
