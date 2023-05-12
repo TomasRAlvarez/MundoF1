@@ -1,17 +1,27 @@
-/* PALETA DE COLORES
-ghost-white: rgba(251, 251, 255);
-black: rgba(0, 0, 0);
-red: rgba(255, 0, 0);
-verde: rgba(0, 217, 80);
-violeta: rgba(171, 39, 204); */
+/* RESET CSS */
 *{
     margin: 0;
     padding: 0;
 }
 
+/* Declaro fuentes */
+@font-face {
+    font-family: Formula1-RegularFont;
+    src: url(/assets/fonts/Formula1-Regular.otf);
+}
+@font-face {
+    font-family: Formula1-BoldFont;
+    src: url(/assets/fonts/Formula1-Bold.otf);
+}
+@font-face {
+    font-family: Formula1-WideFont;
+    src: url(/assets/fonts/Formula1-Wide.otf);
+}
+
+/* Estilos generales del body */
 body{
     background-color: rgb(251, 251, 255);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Formula1-RegularFont;
 }
 
 /* *========= ESTILOS HEADER ========= */
@@ -56,7 +66,6 @@ header{
 
 /* *========= ESTILOS MAIN ========= */
 
-/* !========= CARRUSEL + ANIMACION ========= */
 .carrusel{
     margin-bottom: 3%;
 }
@@ -76,6 +85,7 @@ header{
     width: 60%;
     height: 100%;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .principal__noticias::-webkit-scrollbar{
@@ -122,44 +132,24 @@ header{
     width: 40%;
     margin: 0.5rem;
     border: solid 0.2rem red;
-    border-radius: 1rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(2, min-content);
-    grid-template-areas: 
-    "table-title table-title ..."
-    "column1     column2     column3"
-    ;
+    display: flex;
+    flex-direction: column;
 }
 
 .principal__tabla--title{
-    grid-area: table-title;
-    padding: 1rem 0 0.4rem 1rem ;
+    padding: 0 0 .5rem .5rem;
 }
 
-.columnPos{
-    grid-area: column1;
-}
-
-.columnPil{
-    grid-area: column2;
-}
-
-.columnPun{
-    grid-area: column3;
-}
-
-.principal__tabla--column{
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
+.principal__tabla--table{
     text-align: center;
-    padding: 1rem;
 }
 
-.principal__tabla--column h5{
-    padding-bottom: 0.5rem;
+.principal__tabla--table thead{
     color: red;
+}
+
+.principal__tabla--table tbody{
+    font-size: 0.84rem;
 }
 
 /* *========= ESTILOS FOOTER ========= */
@@ -189,6 +179,7 @@ footer{
 }
 
 .footer__info--copyright{
+    font-size: 0.8rem;
     color: rgb(138, 138, 141);
     margin-left: 1rem;
 }
@@ -601,17 +592,140 @@ footer{
 }
 
 
-/* ?============== RESPONSIVE ============== */
+/* ?============== EMPIEZAN LOS MEDIAQUERIS ============== */
 
-/* header */
-@media screen and (min-width: 991px){ /* a partir de este punto aparece el menu hamburguesa en el header */
+/* header general*/
+@media screen and (min-width: 997px){ /* a partir de este punto aparecen bien los links */
     .header__navbar{
         height: 5rem;
     }
 }
 
-@media screen and (max-width: 768px){
-    .header__navbar{
+/* footer Laptop */
+@media screen and (max-width: 1024px) {
+    footer{
+        height: 5.5rem;
+    }
+}
+
+/* footer Tablet */
+@media screen and (max-width: 768px) {
+    .footer__info--us{
+        font-size: 0.8rem;
+    }
+
+    .footer__info--copyright{
+        font-size: 0.6rem;
+    }
+
+    .footer__redes--img:hover{ /* uso este width para "cancelar" el hover */
+        width: 3.6rem;
+    }
+}
+
+/* footer Mobile L */
+@media screen and (max-width: 425px) {
+    .footer__info--us{
+        font-size: 0.6rem;
+        color: rgb(251, 251, 255);
+        margin-left: 1rem;
+    }
+    
+    .footer__info--copyright{
+        font-size: 0.5rem;
+    }
+    
+    .footer__redes{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: repeat(2, min-content);
+        grid-template-areas:
+        "ig  tw"
+        "wpp fb"
+        ;
+    }
+
+    .ig{
+        grid-area: ig;
+    }
+
+    .tw{
+        grid-area: tw;
+    }
+
+    .wpp{
+        grid-area: wpp;
+    }
+
+    .fb{
+        grid-area: fb;
+    }
+    .footer__redes--img{
+        padding: 0.5rem;
+        width: 2.5rem;
+    }
+
+    .footer__redes--img:hover{ /* uso este width para "cancelar" el hover */
+        width: 2.5rem;
+    }
+}
+
+
+/* *============== RESPONSIVE INDEX ============== */
+
+/* ?425px "Mobile L" */
+@media screen and (max-width: 425px){
+    .principal{
         height: 100%;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(2, min-content);
+        grid-template-areas: 
+        "principalNoticias"
+        "principalTabla"
+        ;
+    }
+
+    .principal__noticias{
+        grid-area: principalNoticias;
+        width: 100%;
+    }
+
+    .principal__noticias--title{
+        font-size: 1.5rem;
+    }
+
+    .principal__noticias--contenedor h2{
+        font-size: 1rem;
+    }
+    
+    .principal__noticias--contenedor p{
+        font-size: 0.8rem;
+    }
+    
+    .principal__noticias--contenedor img{
+        width: 95%;
+    }
+
+    .principal__tabla{
+        grid-area: principalTabla;
+        width: 100%;
+        height: 97.5%;
+        margin: 0;
+    }
+    
+    .principal__tabla--title{
+        font-size: 1.5rem;
+    }
+    
+    .principal__tabla--table tbody{
+        font-size: 0.7rem;
+    }
+}
+
+/* ?320px "Mobile S" */
+@media screen and (max-width: 320px){
+    .principal__noticias--contenedor p{
+        font-size: 0.6rem;
     }
 }
