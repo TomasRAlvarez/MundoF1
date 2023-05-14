@@ -130,6 +130,7 @@ header{
 
 .principal__tabla{
     width: 40%;
+    height: min-content;
     margin: 0.5rem;
     border: solid 0.2rem red;
     display: flex;
@@ -142,6 +143,7 @@ header{
 
 .principal__tabla--table{
     text-align: center;
+    margin: 0;
 }
 
 .principal__tabla--table thead{
@@ -220,7 +222,7 @@ footer{
 /* Estilos + Ubicacion de la noticia principal */
 
 .main__noticia__principal{
-    height: 23rem;
+    height: 100%;
     grid-area: noticiaPrincipal;
     border-right: solid 0.3rem red;
     border-bottom: solid 0.3rem red;
@@ -311,6 +313,7 @@ footer{
 }
 
 .main__noticia__card--text h3{
+    font-size: 1.3rem;
     margin-top: 3%;
     margin-bottom: 15%;
 }
@@ -359,10 +362,9 @@ footer{
 
 .main__resultados--circuitName{
     grid-area: circuit;
-    height: 100%;
     background-image: url("./assets/imgs/bahrein--circuit.jpg");
     background-position: center;
-    background-size: 100%;
+    background-size: cover;
     
     display: flex;
     flex-direction: column;
@@ -370,11 +372,6 @@ footer{
     align-items: center;
     border-top-left-radius: 0.8rem;
     border-bottom-left-radius: 0.8rem;
-    transition: linear 0.2s;
-}
-
-.main__resultados:hover > .main__resultados--circuitName{
-    background-size: 103%;
 }
 
 .main__resultados--circuitName--text{
@@ -394,31 +391,29 @@ footer{
     text-align: center;
 }
 
-
 .main__resultados--circuitName--img img{
     width: 50%;
     border-radius: 1rem;
 }
 
-
 .main__resultados--tabla{
     grid-area: posTable;
-    display: flex;
-    justify-content: space-between;
 }
 
 .main__resultados--tabla--datos{
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
     text-align: center;
+    margin: 0;
+}
+
+.main__resultados--tabla--datos thead{
+    color: red;
 }
 
 .main__resultados--tabla--datos h5{
     padding-top: 0.5rem;
 }
 
-.main__resultados--tabla--datos--vueltaRapida{
+.vueltaRapida{
     color: rgba(171, 39, 204);
 }
 
@@ -436,44 +431,19 @@ footer{
     width: 60%;
     border: solid 0.2rem red;
     border-radius: 1rem;
-    padding: 1rem;
+    padding: 0.5rem;
     margin: 1%;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(2, min-content);
-    grid-template-areas: 
-    "CdPTitle"
-    "CdPColumn"
-    ;
-}
-
-.tabla--pilotos--title{
-    grid-area: CdPTitle;
-}
-
-.tabla--pilotos--columns{
-    grid-area: CdPColumn;
-    text-align: center;
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 2%;
-}
-
-
-.main__posiciones__tabla--pilotos--column{
     display: flex;
     flex-direction: column;
 }
 
-.main__posiciones__tabla--pilotos--column h3{
-    padding: 0.3rem;
-    padding-right: 0;
+.tablaPos{
+    text-align: center;
+    margin: 2% 0 0 0;
 }
 
-.main__posiciones__tabla--pilotos--column h5{
-    padding: 0.3rem;
-    padding-right: 0;
-    border-top: solid 0.2rem rgb(255, 104, 104);
+.tablaPos thead{
+    color: red;
 }
 
 /* TABLA CAMPEONATO CONSTRUCTORES */
@@ -485,40 +455,8 @@ footer{
     border-radius: 1rem;
     padding: 1rem;
     margin: 1%;
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(2, min-content);
-    grid-template-areas: 
-    "CdCTitle"
-    "CdCColumn"
-    ;
-}
-
-.tabla--constructores--title{
-    grid-area: CdCTitle;
-}
-
-.tabla--constructores--columns{
-    grid-area: CdCColumn;
-    text-align: center;
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 2%;
-}
-
-.main__posiciones__tabla--constructores--column{
     display: flex;
     flex-direction: column;
-}
-
-.main__posiciones__tabla--constructores--column h3{
-    padding: 0.3rem;
-    padding-right: 0;
-}
-
-.main__posiciones__tabla--constructores--column h5{
-    padding: 0.3rem;
-    padding-right: 0;
-    border-top: solid 0.2rem rgb(255, 104, 104);
 }
 
 
@@ -592,7 +530,7 @@ footer{
 }
 
 
-/* ?============== EMPIEZAN LOS MEDIAQUERIS ============== */
+/* ?================= EMPIEZAN LOS MEDIAQUERIS ================= */
 
 /* header general*/
 @media screen and (min-width: 997px){ /* a partir de este punto aparecen bien los links */
@@ -727,5 +665,43 @@ footer{
 @media screen and (max-width: 320px){
     .principal__noticias--contenedor p{
         font-size: 0.6rem;
+    }
+}
+
+/* *============== RESPONSIVE NOTICIAS ============== */
+
+/* ?768px "Tablet" */
+@media screen and (max-width: 768px){
+    .main__noticias{
+        width: 90%;
+    }
+
+    .main__noticia__principal--text h2{
+        font-size: 1.5rem;
+    }
+    
+    .main__noticia__principal--text p{
+        font-size: 1rem;
+    }
+
+    .main__noticia__card--text h3{
+        font-size: 1rem;
+    }
+    
+    .main__noticia__card--text p{
+        font-size: 0.8rem;
+    }
+}
+
+/* ?425px "Mobile L" */
+@media screen and (max-width: 425px){ /* con este breackpoint ya se ven bien todos los mobile */
+    .main__noticias{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main__noticia__card--text h3{
+        margin-top: 2%;
+        margin-bottom: 7%;
     }
 }
