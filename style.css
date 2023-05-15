@@ -787,3 +787,37 @@ footer{
         border-radius: 0.5rem;
     }
 }
+
+/* *============== RESPONSIVE POSICIONES ============== */
+
+/* ?768px "Tablet" */
+@media screen and (max-width: 768px){
+    .main__posiciones__tabla{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main__posiciones__tabla--pilotos{
+        width: max-content;
+    }
+
+    .main__posiciones__tabla--constructores{
+        width: max-content;
+    }
+
+    .tablaPos{
+        vertical-align: middle;
+    }
+}
+
+/* ?425px "Mobile L" */
+@media screen and (max-width: 425px){
+    .main__posiciones__tabla--pilotos{
+        width: 100%;
+    }
+
+    .main__posiciones__tabla--constructores{
+        width: 100%;
+    }
+}
