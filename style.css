@@ -344,6 +344,7 @@ footer{
 .main__resultados{
     width: 90%;
     margin: auto;
+    margin-bottom: 5%;
     display: grid;
     grid-template-columns: 20% 80%;
     grid-template-areas: 
@@ -407,10 +408,6 @@ footer{
 
 .main__resultados--tabla--datos thead{
     color: red;
-}
-
-.main__resultados--tabla--datos h5{
-    padding-top: 0.5rem;
 }
 
 .vueltaRapida{
@@ -648,7 +645,7 @@ footer{
     .principal__tabla{
         grid-area: principalTabla;
         width: 100%;
-        height: 97.5%;
+        height: min-content;
         margin: 0;
     }
     
@@ -703,5 +700,90 @@ footer{
     .main__noticia__card--text h3{
         margin-top: 2%;
         margin-bottom: 7%;
+    }
+}
+
+/* *============== RESPONSIVE RESULTADOS ============== */
+
+/* ?768px "Tablet" */
+@media screen and (max-width: 768px){
+    .main__resultados{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 0 15px 3px red;
+        filter: brightness(100%);
+    }
+
+    .main__resultados--circuitName{
+        border-top-left-radius: 0.8rem;
+        border-top-right-radius: 0.8rem;
+        border-bottom-left-radius: 0;
+    }
+
+    .main__resultados--circuitName--text{
+        margin: 1rem;
+        text-align: center;
+    }
+    
+    .main__resultados--circuitName--text h3{
+        font-size: 1.5rem;
+    }
+    
+    .main__resultados--circuitName--img{
+        width: 40%;
+        margin-bottom: 1rem;
+    }
+}
+
+/* ?425px "Mobile L" */
+@media screen and (max-width: 425px){
+    .main__select{
+        margin: 10%;
+    }
+
+    .main__select--title{
+        padding: 0;
+        font-size: 1.3rem;
+    }
+
+    .main__select--selector{
+        width: 40%;
+    }
+
+    .main__resultados--tabla--datos thead{
+        font-size: 0.8rem;
+        vertical-align: middle;
+    }
+
+    .main__resultados--tabla--datos tbody{
+        font-size: 0.7rem;
+        vertical-align: middle;
+    }
+}
+
+/* ?375px "Mobile M" */
+@media screen and (max-width: 375px){
+    .main__select{
+        margin: 5%;
+    }
+}
+
+/* ?320px "Mobile S" */
+@media screen and (max-width: 320px){
+    .main__select{
+        margin: 5%;
+    }
+
+    .main__select--title{
+        font-size: 1rem;
+    }
+
+    .main__select--selector{
+        font-size: 0.8rem;
+    }
+
+    .main__resultados--circuitName--img img{
+        border-radius: 0.5rem;
     }
 }
