@@ -56,12 +56,16 @@
                 <legend class="main__login__contenedor--fieldset--legend">Inicia sesion</legend>
                 
                 <form action="" class="main__login__contenedor--fieldset--form">
-                    <label class="main__login__contenedor--fieldset--form--label" for="user">Correo electronico</label>
-                    <input class="main__login__contenedor--fieldset--form--input" type="email" id="user" required>
-
-                    <label class="main__login__contenedor--fieldset--form--label" for="password">Contraseña</label>
-                    <input class="main__login__contenedor--fieldset--form--input" type="password" id="password" required>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control formTextSize" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Correo Electronico</label>
+                    </div>
                     
+                    <div class="form-floating">
+                        <input type="password" class="form-control formTextSize" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Contraseña</label>
+                    </div>
+
                     <input class="main__login__contenedor--fieldset--form--submit" type="submit" value="Iniciar Sesion">
                 </form>
             </fieldset>
