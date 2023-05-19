@@ -1,0 +1,41 @@
+/* *====================== MAIN PAGINA POSICIONES ======================= */
+
+.main__posiciones__tabla{
+    width: 90%;
+    display: flex;
+    margin: auto;
+}
+
+/* TABLA CAMPEONATO PILOTOS */
+
+.main__posiciones__tabla--pilotos{
+    width: 60%;
+    border: solid 0.2rem red;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tablaPos{
+    text-align: center;
+    margin: 2% 0 0 0;
+}
+
+.tablaPos thead{
+    color: red;
+}
+
+/* TABLA CAMPEONATO CONSTRUCTORES */
+
+.main__posiciones__tabla--constructores{
+    width: 40%;
+    height: 50%;
+    border: solid 0.2rem red;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,25 @@
+/* RESET CSS */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Declaro fuentes */
+@font-face {
+    font-family: Formula1-RegularFont;
+    src: url(/assets/fonts/Formula1-Regular.otf);
+}
+@font-face {
+    font-family: Formula1-BoldFont;
+    src: url(/assets/fonts/Formula1-Bold.otf);
+}
+@font-face {
+    font-family: Formula1-WideFont;
+    src: url(/assets/fonts/Formula1-Wide.otf);
+}
+
+/* Estilos generales del body */
+body{
+    background-color: rgb(251, 251, 255);
+    font-family: Formula1-RegularFont;
+}

@@ -1,0 +1,56 @@
+/* *====================== MAIN PAGINA LOGIN ======================= */
+
+.main__login__contenedor{
+    width: 60%;
+    margin: auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.main__login__contenedor--img{
+    width: 10%;
+    padding: 1rem;
+}
+
+.main__login__contenedor--fieldset{
+    width: 75%;
+    height: min-content;
+    margin-bottom: 5%;
+    border: solid 0.2rem red;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    text-align: center;
+}
+
+.main__login__contenedor--fieldset--legend{
+    font-size: 1rem;
+    color: rgb(251, 251, 255);
+    background-color: red;
+    border: solid 0.2rem red;
+}
+
+.main__login__contenedor--fieldset--form{
+    margin: 10%;
+    margin-bottom: 5%;
+}
+
+.main__login__contenedor--fieldset--form--submit{
+    margin-top: 10%;
+    padding: 0.5rem;
+    color: rgb(251, 251, 255);
+    background-color: black;
+    border-radius: 0.5rem;
+    transition: linear 0.2s;
+    border: none;
+}
+
+.main__login__contenedor--fieldset--form--submit:hover{
+    cursor: pointer;
+    background-color: red;
+    transform: scale(1.1);
+}
+
+.main__login__contenedor--link{
+    text-align: center;
+}
