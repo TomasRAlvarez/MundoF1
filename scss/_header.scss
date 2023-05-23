@@ -1,39 +1,35 @@
 /* *========= ESTILOS HEADER ========= */
+
 header{
     margin: 1% 5% 2% 5%;
     display: flex;
-}
 
-.header__link--img{
-    width: 30%;
-}
+    .header__navbar{
+        width: 100%;
+        border-radius: 1rem;
+        border-bottom: 0.32rem solid black;
+        background-color: red;
 
-.header__navbar{
-    width: 100%;
-    border-radius: 1rem;
-    border-bottom: 0.32rem solid black;
-    background-color: red;
-}
+        .header__link--img{
+            width: 30%;
+        }
 
-.header__navbar__list{
-    width: 100%;
-    justify-content: space-around;
-}
+        .header__navbar__list{
+            width: 100%;
+            justify-content: space-around;
 
-.header__navbar__list--item{
-    margin: auto;
-}
+            .header__navbar__list--item--link{
+                color: black;
+                font-size: 1rem;
+                transition: 0.2s linear;
+                &:hover{
+                    color: white;
+                }
+            }
 
-.header__navbar__list--item--link{
-    color: black;
-    font-size: 1rem;
-    transition: 0.2s linear;
-}
-
-.header__navbar__list--item--link:hover{
-    color: white;
-}
-
-.paginaActual{
-    color: white;
+            .paginaActual{
+                color: white;
+            }
+        }
+    }
 }

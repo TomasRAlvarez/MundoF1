@@ -30,40 +30,30 @@ header {
   display: -ms-flexbox;
   display: flex;
 }
-
-.header__link--img {
-  width: 30%;
-}
-
-.header__navbar {
+header .header__navbar {
   width: 100%;
   border-radius: 1rem;
   border-bottom: 0.32rem solid black;
   background-color: red;
 }
-
-.header__navbar__list {
+header .header__navbar .header__link--img {
+  width: 30%;
+}
+header .header__navbar .header__navbar__list {
   width: 100%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
-
-.header__navbar__list--item {
-  margin: auto;
-}
-
-.header__navbar__list--item--link {
+header .header__navbar .header__navbar__list .header__navbar__list--item--link {
   color: black;
   font-size: 1rem;
   -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
 }
-
-.header__navbar__list--item--link:hover {
+header .header__navbar .header__navbar__list .header__navbar__list--item--link:hover {
   color: white;
 }
-
-.paginaActual {
+header .header__navbar .header__navbar__list .paginaActual {
   color: white;
 }
 
