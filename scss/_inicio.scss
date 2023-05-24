@@ -19,7 +19,7 @@
         overflow-x: hidden;
 
         &::-webkit-scrollbar{
-            width: 0.5rem;
+            width: 0.3rem;
         }
         
         &::-webkit-scrollbar-thumb{
@@ -29,27 +29,37 @@
         .principal__noticias--title{
             margin-left: 1rem;
             font-size: 2rem;
-            color: red;
+            text-decoration: underline red 0.2rem;
         }
         
         .principal__noticias--contenedor{
             display: grid;
-            grid-template-columns: 10% 70% 20%;
+            grid-template-columns: 10% 60% 30%;
             grid-template-rows: repeat(2, min-content);
             grid-template-areas: 
             "title    title    img"
             "descript descript img"
             ;
             padding: 1rem;
+            border-bottom: solid red 0.1rem;
             & h2{
                 grid-area: title;
+                margin-right: 1.5rem;
             }
             & p{
                 grid-area: descript;
+                margin-right: 1.5rem;
             }
             & img{
                 grid-area: img;
                 margin: auto;
+                width: 15rem;
+                box-shadow: 0 0 10px 1.5px;
+                border-radius: 0.5rem;
+                transition: linear 0.2s;
+                &:hover{
+                box-shadow: 0 0 10px 1.5px red;
+                }
             } 
         }
     }

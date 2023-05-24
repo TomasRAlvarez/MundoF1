@@ -86,7 +86,7 @@ header .header__navbar .header__navbar__list .paginaActual {
   overflow-x: hidden;
 }
 .principal .principal__noticias::-webkit-scrollbar {
-  width: 0.5rem;
+  width: 0.3rem;
 }
 .principal .principal__noticias::-webkit-scrollbar-thumb {
   background-color: red;
@@ -94,25 +94,39 @@ header .header__navbar .header__navbar__list .paginaActual {
 .principal .principal__noticias .principal__noticias--title {
   margin-left: 1rem;
   font-size: 2rem;
-  color: red;
+  -webkit-text-decoration: underline red 0.2rem;
+          text-decoration: underline red 0.2rem;
 }
 .principal .principal__noticias .principal__noticias--contenedor {
   display: grid;
-  grid-template-columns: 10% 70% 20%;
+  grid-template-columns: 10% 60% 30%;
   grid-template-rows: repeat(2, -webkit-min-content);
   grid-template-rows: repeat(2, min-content);
   grid-template-areas: "title    title    img" "descript descript img";
   padding: 1rem;
+  border-bottom: solid red 0.1rem;
 }
 .principal .principal__noticias .principal__noticias--contenedor h2 {
   grid-area: title;
+  margin-right: 1.5rem;
 }
 .principal .principal__noticias .principal__noticias--contenedor p {
   grid-area: descript;
+  margin-right: 1.5rem;
 }
 .principal .principal__noticias .principal__noticias--contenedor img {
   grid-area: img;
   margin: auto;
+  width: 15rem;
+  -webkit-box-shadow: 0 0 10px 1.5px;
+          box-shadow: 0 0 10px 1.5px;
+  border-radius: 0.5rem;
+  -webkit-transition: linear 0.2s;
+  transition: linear 0.2s;
+}
+.principal .principal__noticias .principal__noticias--contenedor img:hover {
+  -webkit-box-shadow: 0 0 10px 1.5px red;
+          box-shadow: 0 0 10px 1.5px red;
 }
 .principal .principal__tabla {
   width: 40%;
@@ -247,6 +261,7 @@ footer .footer__info .footer__info--us {
   font-size: 1rem;
   color: rgb(251, 251, 255);
   margin-left: 1rem;
+  margin-right: 2rem;
 }
 footer .footer__info .footer__info--copyright {
   font-size: 0.8rem;
@@ -310,8 +325,8 @@ footer .footer__redes .footer__redes--img:hover {
      object-fit: cover;
 }
 .main__noticias .main__noticia__principal:hover {
-  -webkit-filter: brightness(1.15);
-          filter: brightness(1.15);
+  -webkit-filter: brightness(1.1);
+          filter: brightness(1.1);
   -webkit-box-shadow: 2px 2px 10px 1px black;
           box-shadow: 2px 2px 10px 1px black;
 }
@@ -384,107 +399,6 @@ footer .footer__redes .footer__redes--img:hover {
   margin-bottom: 15%;
 }
 
-/* Estilos + Ubicacion de la noticia principal */
-/* .main__noticia__principal{
-    height: 100%;
-    grid-area: noticiaPrincipal;
-    border-right: solid 0.3rem red;
-    border-bottom: solid 0.3rem red;
-    border-bottom-right-radius: 1rem;
-    padding: 1rem;
-    transition: 0.3s;
-}
-
-.main__noticia__principal a{
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    color: black;
-}
-
-.main__noticia__principal img{
-    width: 100%;
-    height: 10rem;
-    object-fit: cover;
-}
-
-.main__noticia__principal--text h2{
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-.main__noticia__principal--text p{
-    font-size: larger;
-    margin-bottom: 1rem;
-}
-
-.main__noticia__principal:hover{
-    filter: brightness(1.15);
-    box-shadow: 2px 2px 10px 1px black;
-} */
-/* Estilos + Ubicacion de las cards noticias */
-/* .card1{
-    grid-area: ubi1;
-}
-
-.card2{
-    grid-area: ubi2;
-}
-
-.card3{
-    grid-area: ubi3;
-}
-
-.card4{
-    grid-area: ubi4;
-}
-
-.card5{
-    grid-area: ubi5;
-}
-
-.card6{
-    grid-area: ubi6;
-}
-
-.main__noticia__card{
-    border-left: solid 0.1rem rgb(168, 168, 168);
-    border-top: solid 0.1rem rgb(168, 168, 168);
-    border-top-left-radius: 1rem;
-    padding: 1rem;
-    margin: 2%;
-    transition: 0.3s;
-}
-
-.main__noticia__card--link{
-    text-decoration: none;
-    color: black;
-    display: flex;
-    flex-direction: column;
-}
-
-.main__noticia__card--img{
-    width: 90%;
-    height: 7rem;
-    align-self: center;
-    object-fit: cover;
-}
-
-.main__noticia__card--text{
-    margin: 5% 0 0 5%;
-}
-
-.main__noticia__card--text h3{
-    font-size: 1.3rem;
-    margin-top: 3%;
-    margin-bottom: 15%;
-}
-
-.main__noticia__card:hover{
-    border-left: solid 0.1rem red;
-    border-top: solid 0.1rem red;
-    box-shadow: 2px 2px 10px 1px black;
-} */
 /* *====================== MAIN PAGINA RESULTADOS ======================= */
 .main__select {
   display: -webkit-box;
@@ -572,6 +486,10 @@ footer .footer__redes .footer__redes--img:hover {
 }
 .main__resultados .main__resultados--tabla .main__resultados--tabla--datos thead {
   color: red;
+  vertical-align: middle;
+}
+.main__resultados .main__resultados--tabla .main__resultados--tabla--datos tbody {
+  vertical-align: middle;
 }
 .main__resultados .main__resultados--tabla .main__resultados--tabla--datos .vueltaRapida {
   color: rgb(171, 39, 204);
@@ -892,11 +810,9 @@ footer .footer__redes .footer__redes--img:hover {
   }
   .main__resultados .main__resultados--tabla--datos thead {
     font-size: 0.8rem;
-    vertical-align: middle;
   }
   .main__resultados .main__resultados--tabla--datos tbody {
     font-size: 0.7rem;
-    vertical-align: middle;
   }
   /* =====================posiciones */
   .main__posiciones__tabla .main__posiciones__tabla--pilotos {
