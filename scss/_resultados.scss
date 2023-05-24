@@ -1,18 +1,16 @@
 /* *====================== MAIN PAGINA RESULTADOS ======================= */
-
 .main__select{
     display: flex;
     margin-bottom: 2rem;
     justify-content: center;
-}
 
-.main__select--title{
-    padding-right: 2rem;
-}
-
-.main__select--selector{
-    width: 15%;
-    padding: 0.3rem;
+    .main__select--title{
+        padding-right: 2rem;
+    }
+    .main__select--selector{
+        width: 15%;
+        padding: 0.3rem;
+    }
 }
 
 .main__resultados{
@@ -28,62 +26,56 @@
     border-radius: 1rem;
     filter: brightness(30%);
     transition: linear 0.2s;
-}
-
-.main__resultados:hover{
-    box-shadow: 0 0 15px 3px red;
-    filter: brightness(100%);
-}
-
-.main__resultados--circuitName{
-    grid-area: circuit;
-    background-image: url("../assets/imgs/bahrein--circuit.jpg");
-    background-position: center;
-    background-size: cover;
+    &:hover{
+        box-shadow: 0 0 15px 3px red;
+        filter: brightness(100%);
+    }
     
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-top-left-radius: 0.8rem;
-    border-bottom-left-radius: 0.8rem;
-}
+    .main__resultados--circuitName{
+        grid-area: circuit;
+        background-image: url("../assets/imgs/bahrein--circuit.jpg");
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-top-left-radius: 0.8rem;
+        border-bottom-left-radius: 0.8rem;
 
-.main__resultados--circuitName--text{
-    margin: 1rem;
-    text-align: center;
+        .main__resultados--circuitName--text{
+            margin: 1rem;
+            text-align: center;
+            & h3{
+                color: white;
+                font-style: italic;
+                font-size: 2rem;
+            }
+        }
 
-}
+        .main__resultados--circuitName--img{
+            justify-content: center;
+            text-align: center;
+            & img{
+                width: 50%;
+                border-radius: 1rem;
+            }
+        }
+    }
 
-.main__resultados--circuitName--text h3{
-    color: white;
-    font-style: italic;
-    font-size: 2rem;
-}
+    .main__resultados--tabla{
+        grid-area: posTable;
 
-.main__resultados--circuitName--img{
-    justify-content: center;
-    text-align: center;
-}
+        .main__resultados--tabla--datos{
+            text-align: center;
+            margin: 0;
+            & thead{
+                color: red;
+            }
 
-.main__resultados--circuitName--img img{
-    width: 50%;
-    border-radius: 1rem;
-}
-
-.main__resultados--tabla{
-    grid-area: posTable;
-}
-
-.main__resultados--tabla--datos{
-    text-align: center;
-    margin: 0;
-}
-
-.main__resultados--tabla--datos thead{
-    color: red;
-}
-
-.vueltaRapida{
-    color: rgba(171, 39, 204);
+            .vueltaRapida{
+                color: rgba(171, 39, 204);
+            }
+        }
+    }
 }

@@ -1,19 +1,86 @@
 /* *========= ESTILOS MAIN ========= */
-
 .carrusel{
     margin-bottom: 3%;
 }
-
-/* Organizacion de noticias */
 
 .principal{
     width: 100%;
     height: 43rem;
     display: flex;
     margin-bottom: 1%;
+
+    /* Organizacion de noticias */
+    .principal__noticias{
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        height: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+
+        &::-webkit-scrollbar{
+            width: 0.5rem;
+        }
+        
+        &::-webkit-scrollbar-thumb{
+            background-color: red;
+        }
+
+        .principal__noticias--title{
+            margin-left: 1rem;
+            font-size: 2rem;
+            color: red;
+        }
+        
+        .principal__noticias--contenedor{
+            display: grid;
+            grid-template-columns: 10% 70% 20%;
+            grid-template-rows: repeat(2, min-content);
+            grid-template-areas: 
+            "title    title    img"
+            "descript descript img"
+            ;
+            padding: 1rem;
+            & h2{
+                grid-area: title;
+            }
+            & p{
+                grid-area: descript;
+            }
+            & img{
+                grid-area: img;
+                margin: auto;
+            } 
+        }
+    }
+
+    /* Organizacion de Tabla */
+    .principal__tabla{
+        width: 40%;
+        height: min-content;
+        margin: 0.5rem;
+        border: solid 0.2rem red;
+        display: flex;
+        flex-direction: column;
+
+        .principal__tabla--title{
+            padding: 0 0 .5rem .5rem;
+        }
+        
+        .principal__tabla--table{
+            text-align: center;
+            margin: 0;
+            & thead{
+                color: red;
+            }
+            & tbody{
+                font-size: 0.84rem;
+            } 
+        }
+    }
 }
 
-.principal__noticias{
+/* .principal__noticias{
     display: flex;
     flex-direction: column;
     width: 60%;
@@ -58,11 +125,11 @@
 .principal__noticias--contenedor img{
     grid-area: img;
     margin: auto;
-}
+} */
 
 /* Organizacion de Tabla */
 
-.principal__tabla{
+/* .principal__tabla{
     width: 40%;
     height: min-content;
     margin: 0.5rem;
@@ -86,4 +153,4 @@
 
 .principal__tabla--table tbody{
     font-size: 0.84rem;
-}
+} */

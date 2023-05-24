@@ -26,18 +26,24 @@
     /* =====================noticias */
     .main__noticias{
         width: 90%;
-    }
-    .main__noticia__principal--text h2{
-        font-size: 1.5rem;
-    }
-    .main__noticia__principal--text p{
-        font-size: 1rem;
-    }
-    .main__noticia__card--text h3{
-        font-size: 1rem;
-    }
-    .main__noticia__card--text p{
-        font-size: 0.8rem;
+
+        .main__noticia__principal--text{
+            & h2{
+                font-size: 1.5rem;
+            }
+            & p{
+                font-size: 1rem;
+            }
+        }
+
+        .main__noticia__card--text{
+            & h3{
+                font-size: 1rem;
+            }
+            & p{
+                font-size: 0.8rem;
+            }
+        }
     }
 
 
@@ -48,22 +54,25 @@
         flex-direction: column;
         box-shadow: 0 0 15px 3px red;
         filter: brightness(100%);
-    }
-    .main__resultados--circuitName{
-        border-top-left-radius: 0.8rem;
-        border-top-right-radius: 0.8rem;
-        border-bottom-left-radius: 0;
-    }
-    .main__resultados--circuitName--text{
-        margin: 1rem;
-        text-align: center;
-    }
-    .main__resultados--circuitName--text h3{
-        font-size: 1.5rem;
-    }
-    .main__resultados--circuitName--img{
-        width: 40%;
-        margin-bottom: 1rem;
+
+        .main__resultados--circuitName{
+            border-top-left-radius: 0.8rem;
+            border-top-right-radius: 0.8rem;
+            border-bottom-left-radius: 0;
+
+            .main__resultados--circuitName--text{
+                margin: 1rem;
+                text-align: center;
+                & h3{
+                    font-size: 1.5rem;
+                }
+            }
+
+            .main__resultados--circuitName--img{
+                width: 40%;
+                margin-bottom: 1rem;
+            }
+        }
     }
 
 
@@ -72,27 +81,34 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-    .main__posiciones__tabla--pilotos{
-        width: max-content;
-    }
-    .main__posiciones__tabla--constructores{
-        width: max-content;
-    }
-    .tablaPos{
-        vertical-align: middle;
+
+        .main__posiciones__tabla--pilotos{
+            width: max-content;
+        }
+
+        .main__posiciones__tabla--constructores{
+            width: max-content;
+        }
+        
+        .tablaPos{
+            vertical-align: middle;
+        }
     }
 
 
     /* =====================login */
-    .main__login__contenedor--img{
-        width: 20%;
-    }
-    .main__login__contenedor--fieldset{
-        width: 100%;
-    }
-    .main__login__contenedor--fieldset--form--submit{
-        background-color: red;
+    .main__login__contenedor{
+        .main__login__contenedor--img{
+            width: 20%;
+        }
+        .main__login__contenedor--fieldset{
+            width: 100%;
+            .main__login__contenedor--fieldset--form{
+                .main__login__contenedor--fieldset--form--submit{
+                    background-color: red;
+                }
+            }
+        }
     }
 }
 
@@ -153,34 +169,37 @@
         "principalNoticias"
         "principalTabla"
         ;
-    }
-    .principal__noticias{
-        grid-area: principalNoticias;
-        width: 100%;
-    }
-    .principal__noticias--title{
-        font-size: 1.5rem;
-    }
-    .principal__noticias--contenedor h2{
-        font-size: 1rem;
-    }
-    .principal__noticias--contenedor p{
-        font-size: 0.8rem;
-    }
-    .principal__noticias--contenedor img{
-        width: 95%;
-    }
-    .principal__tabla{
-        grid-area: principalTabla;
-        width: 100%;
-        height: min-content;
-        margin: 0;
-    }
-    .principal__tabla--title{
-        font-size: 1.5rem;
-    }
-    .principal__tabla--table tbody{
-        font-size: 0.7rem;
+
+        .principal__noticias{
+            grid-area: principalNoticias;
+            width: 100%;
+            .principal__noticias--title{
+                font-size: 1.5rem;
+            }
+            .principal__noticias--contenedor h2{
+                font-size: 1rem;
+            }
+            .principal__noticias--contenedor p{
+                font-size: 0.8rem;
+            }
+            .principal__noticias--contenedor img{
+                width: 95%;
+            }
+        }
+
+        .principal__tabla{
+            grid-area: principalTabla;
+            width: 100%;
+            height: min-content;
+            margin: 0;
+
+            .principal__tabla--title{
+                font-size: 1.5rem;
+            }
+            .principal__tabla--table tbody{
+                font-size: 0.7rem;
+            }
+        }
     }
 
 
@@ -188,59 +207,75 @@
     .main__noticias{
         display: flex;
         flex-direction: column;
-    }
-    .main__noticia__card--text h3{
-        margin-top: 2%;
-        margin-bottom: 7%;
+
+        .main__noticia__card--text h3{
+            margin-top: 2%;
+            margin-bottom: 7%;
+        }
     }
 
 
     /* =====================resultados */
     .main__select{
         margin: 10%;
+
+        .main__select--title{
+            padding: 0;
+            font-size: 1.3rem;
+        }
+
+        .main__select--selector{
+            width: 40%;
+        }
     }
-    .main__select--title{
-        padding: 0;
-        font-size: 1.3rem;
-    }
-    .main__select--selector{
-        width: 40%;
-    }
-    .main__resultados--tabla--datos thead{
-        font-size: 0.8rem;
-        vertical-align: middle;
-    }
-    .main__resultados--tabla--datos tbody{
-        font-size: 0.7rem;
-        vertical-align: middle;
+    .main__resultados{
+        .main__resultados--circuitName{
+            .main__resultados--circuitName--img{
+                & img{
+                    border-radius: 0.7rem;
+                }
+            }
+        }
+        .main__resultados--tabla--datos{
+            & thead{
+                font-size: 0.8rem;
+                vertical-align: middle;
+            }
+            & tbody{
+                font-size: 0.7rem;
+                vertical-align: middle;
+            }
+        }
     }
 
 
     /* =====================posiciones */
-    .main__posiciones__tabla--pilotos{
-        width: 100%;
-    }
-    .main__posiciones__tabla--constructores{
-        width: 100%;
+    .main__posiciones__tabla{
+        .main__posiciones__tabla--pilotos{
+            width: 100%;
+        }
+        .main__posiciones__tabla--constructores{
+            width: 100%;
+        }
     }
 
 
     /* =====================login */
     .main__login__contenedor{
         width: 80%;
-    }
-    .main__login__contenedor--img{
-        width: 30%;
-    }
-    .main__login__contenedor--fieldset{
-        width: 100%;
-        font-size: 0.8rem;
-    }
-    .formTextSize{
-        font-size: 0.8rem;
-    }
-    .main__login__contenedor--link{
-        font-size: 0.8rem;
+        .main__login__contenedor--img{
+            width: 30%;
+        }
+        .main__login__contenedor--fieldset{
+            width: 100%;
+            font-size: 0.8rem;
+            .formTextSize{
+                font-size: 0.8rem;
+            }
+        }
+        .main__login__contenedor--link{
+            font-size: 0.9rem;
+        }
     }
 }
 
@@ -257,22 +292,33 @@
 /* ------------MOBILE S------------ */
 @media screen and (max-width: 320px){
     /* =====================index */
-    .principal__noticias--contenedor p{
-        font-size: 0.6rem;
+    .principal{
+        .principal__noticias{
+            .principal__noticias--contenedor{
+                & p{
+                    font-size: 0.6rem;
+                }
+            }
+        }
     }
 
 
     /* =====================resultados */
     .main__select{
-        margin: 5%;
+        .main__select--title{
+            font-size: 1rem;
+        }
+        .main__select--selector{
+            font-size: 0.8rem;
+        }
     }
-    .main__select--title{
-        font-size: 1rem;
-    }
-    .main__select--selector{
-        font-size: 0.8rem;
-    }
-    .main__resultados--circuitName--img img{
-        border-radius: 0.5rem;
+    .main__resultados{
+        .main__resultados--circuitName{
+            .main__resultados--circuitName--img{
+                & img{
+                    border-radius: 0.5rem;
+                }
+            }
+        }
     }
 }
