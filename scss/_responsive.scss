@@ -1,84 +1,149 @@
-/* header general*/
 @media screen and (min-width: 997px){ /* a partir de este punto aparecen bien los links */
+    /* =====================header */
     .header__navbar{
         height: 5rem;
     }
 }
 
-/* footer Laptop */
-@media screen and (max-width: 1024px) {
-    footer{
-        height: 5.5rem;
-    }
-}
 
-/* footer Tablet */
+/* ------------TABLET------------ */
 @media screen and (max-width: 768px) {
-    .footer__info--us{
+    /* =====================footer */
+    footer{
+        .footer__info{
+            .footer__info--us{
+                font-size: 0.8rem;
+            }
+            .footer__info--copyright{
+                font-size: 0.6rem;
+            }
+            .footer__redes--img:hover{ /* uso este width para "cancelar" el hover */
+                width: 3.6rem;
+            }
+        }
+    }
+
+    /* =====================noticias */
+    .main__noticias{
+        width: 90%;
+    }
+    .main__noticia__principal--text h2{
+        font-size: 1.5rem;
+    }
+    .main__noticia__principal--text p{
+        font-size: 1rem;
+    }
+    .main__noticia__card--text h3{
+        font-size: 1rem;
+    }
+    .main__noticia__card--text p{
         font-size: 0.8rem;
     }
 
-    .footer__info--copyright{
-        font-size: 0.6rem;
+
+    /* =====================resultados */
+    .main__resultados{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 0 15px 3px red;
+        filter: brightness(100%);
+    }
+    .main__resultados--circuitName{
+        border-top-left-radius: 0.8rem;
+        border-top-right-radius: 0.8rem;
+        border-bottom-left-radius: 0;
+    }
+    .main__resultados--circuitName--text{
+        margin: 1rem;
+        text-align: center;
+    }
+    .main__resultados--circuitName--text h3{
+        font-size: 1.5rem;
+    }
+    .main__resultados--circuitName--img{
+        width: 40%;
+        margin-bottom: 1rem;
     }
 
-    .footer__redes--img:hover{ /* uso este width para "cancelar" el hover */
-        width: 3.6rem;
+
+    /* =====================posiciones */
+    .main__posiciones__tabla{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main__posiciones__tabla--pilotos{
+        width: max-content;
+    }
+    .main__posiciones__tabla--constructores{
+        width: max-content;
+    }
+    .tablaPos{
+        vertical-align: middle;
+    }
+
+
+    /* =====================login */
+    .main__login__contenedor--img{
+        width: 20%;
+    }
+    .main__login__contenedor--fieldset{
+        width: 100%;
+    }
+    .main__login__contenedor--fieldset--form--submit{
+        background-color: red;
     }
 }
 
-/* footer Mobile L */
+
+/* ------------MOBILE L------------ */
 @media screen and (max-width: 425px) {
-    .footer__info--us{
-        font-size: 0.6rem;
-        color: rgb(251, 251, 255);
-        margin-left: 1rem;
-    }
-    
-    .footer__info--copyright{
-        font-size: 0.5rem;
-    }
-    
-    .footer__redes{
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: repeat(2, min-content);
-        grid-template-areas:
-        "ig  tw"
-        "wpp fb"
-        ;
+    /* =====================footer */
+    footer{
+        .footer__info{
+            .footer__info--us{
+                font-size: 0.6rem;
+                color: rgb(251, 251, 255);
+                margin-left: 1rem;
+            }
+            .footer__info--copyright{
+                font-size: 0.5rem;
+            }
+        }
+
+        .footer__redes{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: repeat(2, min-content);
+            grid-template-areas:
+            "ig  tw"
+            "wpp fb"
+            ;
+            .ig{
+                grid-area: ig;
+            }
+            .tw{
+                grid-area: tw;
+            }
+            .wpp{
+                grid-area: wpp;
+            }
+            .fb{
+                grid-area: fb;
+            }
+            .footer__redes--img{
+                padding: 0.5rem;
+                width: 2.5rem;
+            }
+            .footer__redes--img:hover{ /* uso este width para "cancelar" el hover */
+                width: 2.5rem;
+            }
+        }
     }
 
-    .ig{
-        grid-area: ig;
-    }
 
-    .tw{
-        grid-area: tw;
-    }
-
-    .wpp{
-        grid-area: wpp;
-    }
-
-    .fb{
-        grid-area: fb;
-    }
-    .footer__redes--img{
-        padding: 0.5rem;
-        width: 2.5rem;
-    }
-
-    .footer__redes--img:hover{ /* uso este width para "cancelar" el hover */
-        width: 2.5rem;
-    }
-}
-
-
-/* *============== RESPONSIVE INDEX ============== */
-
-/* ?425px "Mobile L" */
-@media screen and (max-width: 425px){
+    /* =====================index */
     .principal{
         height: 100%;
         display: grid;
@@ -89,245 +154,125 @@
         "principalTabla"
         ;
     }
-
     .principal__noticias{
         grid-area: principalNoticias;
         width: 100%;
     }
-
     .principal__noticias--title{
         font-size: 1.5rem;
     }
-
     .principal__noticias--contenedor h2{
         font-size: 1rem;
     }
-    
     .principal__noticias--contenedor p{
         font-size: 0.8rem;
     }
-    
     .principal__noticias--contenedor img{
         width: 95%;
     }
-
     .principal__tabla{
         grid-area: principalTabla;
         width: 100%;
         height: min-content;
         margin: 0;
     }
-    
     .principal__tabla--title{
         font-size: 1.5rem;
     }
-    
     .principal__tabla--table tbody{
         font-size: 0.7rem;
     }
-}
 
-/* ?320px "Mobile S" */
-@media screen and (max-width: 320px){
-    .principal__noticias--contenedor p{
-        font-size: 0.6rem;
-    }
-}
 
-/* *============== RESPONSIVE NOTICIAS ============== */
-
-/* ?768px "Tablet" */
-@media screen and (max-width: 768px){
-    .main__noticias{
-        width: 90%;
-    }
-
-    .main__noticia__principal--text h2{
-        font-size: 1.5rem;
-    }
-    
-    .main__noticia__principal--text p{
-        font-size: 1rem;
-    }
-
-    .main__noticia__card--text h3{
-        font-size: 1rem;
-    }
-    
-    .main__noticia__card--text p{
-        font-size: 0.8rem;
-    }
-}
-
-/* ?425px "Mobile L" */
-@media screen and (max-width: 425px){ /* con este breackpoint ya se ven bien todos los mobile */
+    /* =====================noticias */
     .main__noticias{
         display: flex;
         flex-direction: column;
     }
-
     .main__noticia__card--text h3{
         margin-top: 2%;
         margin-bottom: 7%;
     }
-}
 
-/* *============== RESPONSIVE RESULTADOS ============== */
 
-/* ?768px "Tablet" */
-@media screen and (max-width: 768px){
-    .main__resultados{
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        box-shadow: 0 0 15px 3px red;
-        filter: brightness(100%);
-    }
-
-    .main__resultados--circuitName{
-        border-top-left-radius: 0.8rem;
-        border-top-right-radius: 0.8rem;
-        border-bottom-left-radius: 0;
-    }
-
-    .main__resultados--circuitName--text{
-        margin: 1rem;
-        text-align: center;
-    }
-    
-    .main__resultados--circuitName--text h3{
-        font-size: 1.5rem;
-    }
-    
-    .main__resultados--circuitName--img{
-        width: 40%;
-        margin-bottom: 1rem;
-    }
-}
-
-/* ?425px "Mobile L" */
-@media screen and (max-width: 425px){
+    /* =====================resultados */
     .main__select{
         margin: 10%;
     }
-
     .main__select--title{
         padding: 0;
         font-size: 1.3rem;
     }
-
     .main__select--selector{
         width: 40%;
     }
-
     .main__resultados--tabla--datos thead{
         font-size: 0.8rem;
         vertical-align: middle;
     }
-
     .main__resultados--tabla--datos tbody{
         font-size: 0.7rem;
         vertical-align: middle;
     }
-}
 
-/* ?375px "Mobile M" */
-@media screen and (max-width: 375px){
-    .main__select{
-        margin: 5%;
-    }
-}
 
-/* ?320px "Mobile S" */
-@media screen and (max-width: 320px){
-    .main__select{
-        margin: 5%;
-    }
-
-    .main__select--title{
-        font-size: 1rem;
-    }
-
-    .main__select--selector{
-        font-size: 0.8rem;
-    }
-
-    .main__resultados--circuitName--img img{
-        border-radius: 0.5rem;
-    }
-}
-
-/* *============== RESPONSIVE POSICIONES ============== */
-
-/* ?768px "Tablet" */
-@media screen and (max-width: 768px){
-    .main__posiciones__tabla{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .main__posiciones__tabla--pilotos{
-        width: max-content;
-    }
-
-    .main__posiciones__tabla--constructores{
-        width: max-content;
-    }
-
-    .tablaPos{
-        vertical-align: middle;
-    }
-}
-
-/* ?425px "Mobile L" */
-@media screen and (max-width: 425px){
+    /* =====================posiciones */
     .main__posiciones__tabla--pilotos{
         width: 100%;
     }
-
     .main__posiciones__tabla--constructores{
         width: 100%;
     }
-}
 
-/* *============== RESPONSIVE LOGIN ============== */
 
-/* ?768px "Tablet" */
-@media screen and (max-width: 768px){
-    .main__login__contenedor--img{
-        width: 20%;
-    }
-
-    .main__login__contenedor--fieldset{
-        width: 100%;
-    }
-    
-    .main__login__contenedor--fieldset--form--submit{
-        background-color: red;
-    }
-}
-
-/* ?425px "Mobile L" */
-@media screen and (max-width: 425px){
+    /* =====================login */
     .main__login__contenedor{
         width: 80%;
     }
-    
     .main__login__contenedor--img{
         width: 30%;
     }
-
     .main__login__contenedor--fieldset{
         width: 100%;
         font-size: 0.8rem;
     }
-
     .formTextSize{
         font-size: 0.8rem;
     }
-
     .main__login__contenedor--link{
         font-size: 0.8rem;
+    }
+}
+
+
+/* ------------MOBILE M------------ */
+@media screen and (max-width: 375px){
+    /* =====================resultados */
+    .main__select{
+        margin: 5%;
+    }
+}
+
+
+/* ------------MOBILE S------------ */
+@media screen and (max-width: 320px){
+    /* =====================index */
+    .principal__noticias--contenedor p{
+        font-size: 0.6rem;
+    }
+
+
+    /* =====================resultados */
+    .main__select{
+        margin: 5%;
+    }
+    .main__select--title{
+        font-size: 1rem;
+    }
+    .main__select--selector{
+        font-size: 0.8rem;
+    }
+    .main__resultados--circuitName--img img{
+        border-radius: 0.5rem;
     }
 }
