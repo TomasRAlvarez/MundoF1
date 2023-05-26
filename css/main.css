@@ -92,10 +92,18 @@ header .header__navbar .header__navbar__list .paginaActual {
   background-color: red;
 }
 .principal .principal__noticias .principal__noticias--title {
+  width: 59%;
+  background-color: rgb(251, 251, 255); /* el mismo que el fondo del body*/
+  position: absolute;
+}
+.principal .principal__noticias .principal__noticias--title .principal__noticias--title--text {
   margin-left: 1rem;
   font-size: 2rem;
   -webkit-text-decoration: underline red 0.2rem;
           text-decoration: underline red 0.2rem;
+}
+.principal .principal__noticias .marginTitle { /* margen de la primer noticia con el titulo por el position absolute */
+  margin-top: 2rem;
 }
 .principal .principal__noticias .principal__noticias--contenedor {
   display: grid;
@@ -620,6 +628,26 @@ footer .footer__redes .footer__redes--img:hover {
   footer .footer__info .footer__redes--img:hover { /* uso este width para "cancelar" el hover */
     width: 3.6rem;
   }
+  /* =====================index */
+  .principal .principal__noticias .principal__noticias--title .principal__noticias--title--text {
+    font-size: 1.5rem;
+  }
+  .principal .principal__noticias .principal__noticias--contenedor h2 {
+    font-size: 1.2rem;
+  }
+  .principal .principal__noticias .principal__noticias--contenedor p {
+    font-size: 1rem;
+  }
+  .principal .principal__noticias .principal__noticias--contenedor img {
+    width: 95%;
+  }
+  .principal .principal__tabla .principal__tabla--title {
+    font-size: 1.2rem;
+  }
+  .principal .principal__tabla .principal__tabla--table tbody {
+    font-size: 0.83rem;
+    vertical-align: middle;
+  }
   /* =====================noticias */
   .main__noticias {
     width: 90%;
@@ -754,7 +782,7 @@ footer .footer__redes .footer__redes--img:hover {
     grid-area: principalNoticias;
     width: 100%;
   }
-  .principal .principal__noticias .principal__noticias--title {
+  .principal .principal__noticias .principal__noticias--title .principal__noticias--title--text {
     font-size: 1.5rem;
   }
   .principal .principal__noticias .principal__noticias--contenedor h2 {

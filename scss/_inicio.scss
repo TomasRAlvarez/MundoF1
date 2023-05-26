@@ -27,11 +27,20 @@
         }
 
         .principal__noticias--title{
-            margin-left: 1rem;
-            font-size: 2rem;
-            text-decoration: underline red 0.2rem;
+            width: 59%;
+            background-color: rgb(251, 251, 255);/* el mismo que el fondo del body*/
+            position: absolute;
+            .principal__noticias--title--text{
+                margin-left: 1rem;
+                font-size: 2rem;
+                text-decoration: underline red 0.2rem;
+            }
         }
         
+        .marginTitle{ /* margen de la primer noticia con el titulo por el position absolute */
+            margin-top: 2rem;
+        }
+
         .principal__noticias--contenedor{
             display: grid;
             grid-template-columns: 10% 60% 30%;
