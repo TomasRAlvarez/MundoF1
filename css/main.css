@@ -408,25 +408,65 @@ footer .footer__redes .footer__redes--img:hover {
 }
 
 /* *====================== MAIN PAGINA RESULTADOS ======================= */
-.main__select {
+.mainResultadosPage {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.mainResultadosPage .main__select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 2rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  text-align: center;
 }
-.main__select .main__select--title {
-  padding-right: 2rem;
+.mainResultadosPage .main__select .main__select--title--text {
+  margin: 1%;
 }
-.main__select .main__select--selector {
-  width: 15%;
-  padding: 0.3rem;
+.mainResultadosPage .main__select .main__select--carrera {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 1rem;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
-
-.main__resultados {
+.mainResultadosPage .main__select .main__select--carrera .main__select--carrera--flag {
+  width: 10%;
+}
+.mainResultadosPage .main__select .main__select--carrera .main__select--carrera--flag a img {
+  width: 100%;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0 0 15px 0.1px black;
+          box-shadow: 0 0 15px 0.1px black;
+  -webkit-transition: linear 0.2s;
+  transition: linear 0.2s;
+}
+.mainResultadosPage .main__select .main__select--carrera .main__select--carrera--flag a img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.mainResultadosPage .main__select .main__select--carrera .main__select--carrera--flag h5 {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+.mainResultadosPage .main__select .main__select--carrera .main__select--carrera--flag h6 {
+  font-size: 0.8rem;
+}
+.mainResultadosPage .main__resultados {
   width: 90%;
+  height: 90vh;
   margin: auto;
   margin-bottom: 5%;
   display: grid;
@@ -434,20 +474,12 @@ footer .footer__redes .footer__redes--img:hover {
   grid-template-areas: "circuit posTable";
   border: solid 0.2rem red;
   border-radius: 1rem;
-  -webkit-filter: brightness(30%);
-          filter: brightness(30%);
-  -webkit-transition: linear 0.2s;
-  transition: linear 0.2s;
-}
-.main__resultados:hover {
   -webkit-box-shadow: 0 0 15px 3px red;
           box-shadow: 0 0 15px 3px red;
-  -webkit-filter: brightness(100%);
-          filter: brightness(100%);
+  /* fondos segun carrera */
 }
-.main__resultados .main__resultados--circuitName {
+.mainResultadosPage .main__resultados .main__resultados--circuitName {
   grid-area: circuit;
-  background-image: url("../assets/imgs/bahrein--circuit.jpg");
   background-position: center;
   background-size: cover;
   display: -webkit-box;
@@ -466,41 +498,76 @@ footer .footer__redes .footer__redes--img:hover {
   border-top-left-radius: 0.8rem;
   border-bottom-left-radius: 0.8rem;
 }
-.main__resultados .main__resultados--circuitName .main__resultados--circuitName--text {
+.mainResultadosPage .main__resultados .main__resultados--circuitName .main__resultados--circuitName--text {
   margin: 1rem;
   text-align: center;
 }
-.main__resultados .main__resultados--circuitName .main__resultados--circuitName--text h3 {
+.mainResultadosPage .main__resultados .main__resultados--circuitName .main__resultados--circuitName--text h3 {
   color: white;
   font-style: italic;
   font-size: 2rem;
 }
-.main__resultados .main__resultados--circuitName .main__resultados--circuitName--img {
+.mainResultadosPage .main__resultados .main__resultados--circuitName .main__resultados--circuitName--text .suspendida {
+  color: red;
+}
+.mainResultadosPage .main__resultados .main__resultados--circuitName .main__resultados--circuitName--img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
 }
-.main__resultados .main__resultados--circuitName .main__resultados--circuitName--img img {
+.mainResultadosPage .main__resultados .main__resultados--circuitName .main__resultados--circuitName--img img {
   width: 50%;
   border-radius: 1rem;
 }
-.main__resultados .main__resultados--tabla {
+.mainResultadosPage .main__resultados .main__resultados--tabla {
   grid-area: posTable;
 }
-.main__resultados .main__resultados--tabla .main__resultados--tabla--datos {
+.mainResultadosPage .main__resultados .main__resultados--tabla::-webkit-scrollbar {
+  width: 0.8rem;
+}
+.mainResultadosPage .main__resultados .main__resultados--tabla::-webkit-scrollbar-thumb {
+  background-color: red;
+  border-radius: 1rem;
+}
+.mainResultadosPage .main__resultados .main__resultados--tabla .main__resultados--tabla--datos {
   text-align: center;
   margin: 0;
 }
-.main__resultados .main__resultados--tabla .main__resultados--tabla--datos thead {
+.mainResultadosPage .main__resultados .main__resultados--tabla .main__resultados--tabla--datos thead {
   color: red;
   vertical-align: middle;
 }
-.main__resultados .main__resultados--tabla .main__resultados--tabla--datos tbody {
+.mainResultadosPage .main__resultados .main__resultados--tabla .main__resultados--tabla--datos tbody {
   vertical-align: middle;
 }
-.main__resultados .main__resultados--tabla .main__resultados--tabla--datos .vueltaRapida {
+.mainResultadosPage .main__resultados .main__resultados--tabla .main__resultados--tabla--datos .vueltaRapida {
   color: rgb(171, 39, 204);
+}
+.mainResultadosPage .main__resultados .bgBahrein {
+  background-image: url("../assets/imgs/bahrein--circuit.jpg");
+}
+.mainResultadosPage .main__resultados .bgArabia {
+  background-image: url("../assets/imgs/jeddah--circuit.jpg");
+}
+.mainResultadosPage .main__resultados .bgAustralia {
+  background-image: url("../assets/imgs/melbourne--circuit.jpg");
+}
+.mainResultadosPage .main__resultados .bgBaku {
+  background-image: url("../assets/imgs/baku--circuit.jpg");
+}
+.mainResultadosPage .main__resultados .bgMiami {
+  background-image: url("../assets/imgs/miami--circuit.jpg");
+}
+.mainResultadosPage .main__resultados .bgImola {
+  background-image: url("../assets/imgs/imola--circuit.jpg");
+}
+.mainResultadosPage .main__resultados .bgMonaco {
+  background-image: url("../assets/imgs/monaco--circuit.jpg");
+}
+.mainResultadosPage .carreraDisabled {
+  -webkit-filter: brightness(30%);
+          filter: brightness(30%);
 }
 
 /* *====================== MAIN PAGINA POSICIONES ======================= */
@@ -665,7 +732,10 @@ footer .footer__redes .footer__redes--img:hover {
     font-size: 0.8rem;
   }
   /* =====================resultados */
-  .main__resultados {
+  .mainResultadosPage .main__select .main__select--carrera .main__select--carrera--flag h5 {
+    font-size: 0.8rem;
+  }
+  .mainResultadosPage .main__resultados {
     width: 90%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -674,26 +744,25 @@ footer .footer__redes .footer__redes--img:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-shadow: 0 0 15px 3px red;
-            box-shadow: 0 0 15px 3px red;
-    -webkit-filter: brightness(100%);
-            filter: brightness(100%);
   }
-  .main__resultados .main__resultados--circuitName {
+  .mainResultadosPage .main__resultados .main__resultados--circuitName {
     border-top-left-radius: 0.8rem;
     border-top-right-radius: 0.8rem;
     border-bottom-left-radius: 0;
   }
-  .main__resultados .main__resultados--circuitName .main__resultados--circuitName--text {
+  .mainResultadosPage .main__resultados .main__resultados--circuitName .main__resultados--circuitName--text {
     margin: 1rem;
     text-align: center;
   }
-  .main__resultados .main__resultados--circuitName .main__resultados--circuitName--text h3 {
+  .mainResultadosPage .main__resultados .main__resultados--circuitName .main__resultados--circuitName--text h3 {
     font-size: 1.5rem;
   }
-  .main__resultados .main__resultados--circuitName .main__resultados--circuitName--img {
-    width: 40%;
+  .mainResultadosPage .main__resultados .main__resultados--circuitName .main__resultados--circuitName--img {
+    width: 30%;
     margin-bottom: 1rem;
+  }
+  .mainResultadosPage .main__resultados .main__resultados--circuitName .main__resultados--circuitName--img img {
+    border-radius: 0.8rem;
   }
   /* =====================posiciones */
   .main__posiciones__tabla {
@@ -823,23 +892,51 @@ footer .footer__redes .footer__redes--img:hover {
     margin-bottom: 7%;
   }
   /* =====================resultados */
-  .main__select {
-    margin: 10%;
+  .mainResultadosPage .main__select {
+    margin-bottom: 0;
+    overflow-y: scroll;
   }
-  .main__select .main__select--title {
-    padding: 0;
+  .mainResultadosPage .main__select .main__select--title {
+    width: 100%;
+    position: absolute;
+  }
+  .mainResultadosPage .main__select .main__select--title .main__select--title--text {
     font-size: 1.3rem;
   }
-  .main__select .main__select--selector {
-    width: 40%;
+  .mainResultadosPage .main__select .main__select--carrera {
+    margin-top: 5%;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
   }
-  .main__resultados .main__resultados--circuitName .main__resultados--circuitName--img img {
-    border-radius: 0.7rem;
+  .mainResultadosPage .main__select .main__select--carrera .main__select--carrera--flag {
+    margin-right: 1rem;
+    width: 70px;
   }
-  .main__resultados .main__resultados--tabla--datos thead {
+  .mainResultadosPage .main__select .main__select--carrera .main__select--carrera--flag a img {
+    width: 100%;
+    margin-top: 20%;
+  }
+  .mainResultadosPage .main__select .main__select--carrera .main__select--carrera--flag h5 {
+    margin-top: 0.4rem;
+    font-size: 0.9rem;
+  }
+  .mainResultadosPage .main__select .main__select--carrera .main__select--carrera--flag h6 {
     font-size: 0.8rem;
   }
-  .main__resultados .main__resultados--tabla--datos tbody {
+  .mainResultadosPage .main__resultados {
+    height: 100%;
+  }
+  .mainResultadosPage .main__resultados .main__resultados--circuitName .main__resultados--circuitName--img img {
+    border-radius: 0.5rem;
+  }
+  .mainResultadosPage .main__resultados .main__resultados--tabla::-webkit-scrollbar {
+    height: 0.8rem;
+  }
+  .mainResultadosPage .main__resultados .main__resultados--tabla .main__resultados--tabla--datos thead {
+    font-size: 0.8rem;
+  }
+  .mainResultadosPage .main__resultados .main__resultados--tabla .main__resultados--tabla--datos tbody {
     font-size: 0.7rem;
   }
   /* =====================posiciones */
@@ -881,13 +978,16 @@ footer .footer__redes .footer__redes--img:hover {
     font-size: 0.6rem;
   }
   /* =====================resultados */
-  .main__select .main__select--title {
+  .mainResultadosPage .main__select .main__select--title {
+    width: 80%;
+  }
+  .mainResultadosPage .main__select .main__select--title .main__select--title--text {
     font-size: 1rem;
   }
-  .main__select .main__select--selector {
-    font-size: 0.8rem;
+  .mainResultadosPage .main__select .main__select--carrera .main__select--carrera--flag {
+    font-size: 0.1rem;
   }
-  .main__resultados .main__resultados--circuitName .main__resultados--circuitName--img img {
+  .mainResultadosPage .main__resultados .main__resultados--circuitName .main__resultados--circuitName--img img {
     border-radius: 0.5rem;
   }
 }

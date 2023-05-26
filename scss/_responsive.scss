@@ -80,29 +80,41 @@
 
 
     /* =====================resultados */
-    .main__resultados{
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        box-shadow: 0 0 15px 3px red;
-        filter: brightness(100%);
-
-        .main__resultados--circuitName{
-            border-top-left-radius: 0.8rem;
-            border-top-right-radius: 0.8rem;
-            border-bottom-left-radius: 0;
-
-            .main__resultados--circuitName--text{
-                margin: 1rem;
-                text-align: center;
-                & h3{
-                    font-size: 1.5rem;
+    .mainResultadosPage{
+        .main__select{
+            .main__select--carrera{
+                .main__select--carrera--flag{
+                    & h5{
+                        font-size: 0.8rem;
+                    }
                 }
             }
+        }
+        .main__resultados{
+            width: 90%;
+            display: flex;
+            flex-direction: column;
 
-            .main__resultados--circuitName--img{
-                width: 40%;
-                margin-bottom: 1rem;
+            .main__resultados--circuitName{
+                border-top-left-radius: 0.8rem;
+                border-top-right-radius: 0.8rem;
+                border-bottom-left-radius: 0;
+    
+                .main__resultados--circuitName--text{
+                    margin: 1rem;
+                    text-align: center;
+                    & h3{
+                        font-size: 1.5rem;
+                    }
+                }
+    
+                .main__resultados--circuitName--img{
+                    width: 30%;
+                    margin-bottom: 1rem;
+                    & img{
+                        border-radius: 0.8rem;
+                    }
+                }
             }
         }
     }
@@ -252,32 +264,60 @@
 
 
     /* =====================resultados */
-    .main__select{
-        margin: 10%;
-
-        .main__select--title{
-            padding: 0;
-            font-size: 1.3rem;
-        }
-
-        .main__select--selector{
-            width: 40%;
-        }
-    }
-    .main__resultados{
-        .main__resultados--circuitName{
-            .main__resultados--circuitName--img{
-                & img{
-                    border-radius: 0.7rem;
+    .mainResultadosPage{
+        .main__select{
+            margin-bottom: 0;
+            overflow-y: scroll;
+            .main__select--title{
+                width: 100%;
+                position: absolute;
+                .main__select--title--text{
+                    font-size: 1.3rem;
+                }
+            }
+            .main__select--carrera{
+                margin-top: 5%;
+                width: max-content;
+                .main__select--carrera--flag{
+                    margin-right: 1rem;
+                    width: 70px;
+                    & a{
+                        & img{
+                            width: 100%;
+                            margin-top: 20%;
+                        }
+                    }
+                    & h5{
+                        margin-top: 0.4rem;
+                        font-size: 0.9rem;
+                    }
+                    & h6{
+                        font-size: 0.8rem;
+                    }
                 }
             }
         }
-        .main__resultados--tabla--datos{
-            & thead{
-                font-size: 0.8rem;
+        .main__resultados{
+            height: 100%;
+            .main__resultados--circuitName{
+                .main__resultados--circuitName--img{
+                    & img{
+                        border-radius: 0.5rem;
+                    }
+                }
             }
-            & tbody{
-                font-size: 0.7rem;
+            .main__resultados--tabla{
+                &::-webkit-scrollbar{
+                    height: 0.8rem;
+                }
+                .main__resultados--tabla--datos{
+                    & thead{
+                        font-size: 0.8rem;
+                    }
+                    & tbody{
+                        font-size: 0.7rem;
+                    }
+                }
             }
         }
     }
@@ -338,19 +378,26 @@
 
 
     /* =====================resultados */
-    .main__select{
-        .main__select--title{
-            font-size: 1rem;
+    .mainResultadosPage{
+        .main__select{
+            .main__select--title{
+                width: 80%;
+                .main__select--title--text{
+                    font-size: 1rem;
+                }
+            }
+            .main__select--carrera{
+                .main__select--carrera--flag{
+                    font-size: 0.1rem;
+                }
+            }
         }
-        .main__select--selector{
-            font-size: 0.8rem;
-        }
-    }
-    .main__resultados{
-        .main__resultados--circuitName{
-            .main__resultados--circuitName--img{
-                & img{
-                    border-radius: 0.5rem;
+        .main__resultados{
+            .main__resultados--circuitName{
+                .main__resultados--circuitName--img{
+                    & img{
+                        border-radius: 0.5rem;
+                    }
                 }
             }
         }

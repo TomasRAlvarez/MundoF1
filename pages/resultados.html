@@ -65,31 +65,69 @@
     </header>
     
     <!-- *======== MAIN ======== -->
-    <main>
+    <main class="mainResultadosPage">
         <article class="main__select">
-            <h2 class="main__select--title">Seleccione una Carrera</h2>
-            <select class="main__select--selector" name="ronda" id="ronda">
-                <option value="1">Carrera 1</option>
-                <option value="2">Carrera 2</option>
-                <option value="3">Carrera 3</option>
-                <option value="4">Carrera 4</option>
-                <option value="5">Carrera 5</option>
-                <option value="6">Carrera 6</option>
-                <option value="7">Carrera 7</option>
-                <option value="8">Carrera 8</option>
-                <option value="9">Carrera 9</option>
-                <option value="10">Carrera 10</option>
-            </select>
+            <section class="main__select--title">
+                <h2 class="main__select--title--text">Grandes Premios 2023</h2>
+            </section>
+
+            <section class="main__select--carrera">
+                <!-- SELECTOR BAHREIN -->
+                <div class="main__select--carrera--flag">
+                    <a href="#bahrein"><img src="../assets/imgs/bahrein--bandera.png" alt=""></a>
+                    <h5>Bahrein</h5>
+                    <h6>05-03</h6>
+                </div>
+                <!-- SELECTOR ARABIA -->
+                <div class="main__select--carrera--flag">
+                    <a href="#arabia"><img src="../assets/imgs/arabia--bandera.png" alt=""></a>
+                    <h5>Arabia</h5>
+                    <h6>19-03</h6>
+                </div>                
+                <!-- SELECTOR AUSTRALIA -->
+                <div class="main__select--carrera--flag">
+                    <a href="#australia"><img src="../assets/imgs/australia--bandera.png" alt=""></a>
+                    <div>
+                        <h5>Australia</h5>
+                        <h6>02-04</h6>
+                    </div>
+                </div>
+                <!-- SELECTOR BAKU -->
+                <div class="main__select--carrera--flag">
+                    <a href="#baku"><img src="../assets/imgs/azerbaijan--bandera.png" alt=""></a>
+                    <h5>Baku</h5>
+                    <h6>30-04</h6>
+                </div>
+                <!-- SELECTOR MIAMI -->
+                <div class="main__select--carrera--flag">
+                    <a href="#miami"><img src="../assets/imgs/usa--bandera.png" alt=""></a>
+                    <h5>Miami</h5>
+                    <h6>07-05</h6>
+                </div>
+                <!-- SELECTOR IMOLA -->
+                <div class="main__select--carrera--flag">
+                    <a href="#imola"><img src="../assets/imgs/italia--bandera.png" alt=""></a>
+                    <h5>Imola</h5>
+                    <h6>21-05</h6>
+                </div>
+                <!-- SELECTOR MONACO -->
+                <div class="main__select--carrera--flag">
+                    <a href="#monaco"><img src="../assets/imgs/monaco--bandera.png" alt=""></a>
+                    <h5>Monaco</h5>
+                    <h6>28-05</h6>
+                </div>
+            </section>
         </article>
 
+        <!-- CARRERA BAHREIN -->
         <article class="main__resultados">
-            <section class="main__resultados--circuitName">
+            <section class="main__resultados--circuitName bgBahrein" id="bahrein">
                 <div class="main__resultados--circuitName--text">
                     <h3>BAHREIN</h3>
                 </div>
 
                 <div class="main__resultados--circuitName--img">
-                    <img src=".././assets/imgs/bahrein--bandera.png" alt="Bandera de Bahrein">
+                    <img src=".././assets/imgs/bahrein--bandera.png" alt="Bandera de Bahrein" title="Bandera de Bahrein">
                 </div>
             </section>
 
@@ -265,6 +303,1141 @@
                             <td>DNF</td>
                             <td>0</td>
                             <td>1:40.691</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </article>
+        <!-- CARRERA ARABIA -->
+        <article class="main__resultados">
+            <section class="main__resultados--circuitName bgArabia" id="arabia">
+                <div class="main__resultados--circuitName--text">
+                    <h3>Arabia</h3>
+                </div>
+
+                <div class="main__resultados--circuitName--img">
+                    <img src=".././assets/imgs/arabia--bandera.png" alt="Bandera de Arabia Saudita" title="Bandera de Arabia Saudita">
+                </div>
+            </section>
+
+            <section class="main__resultados--tabla table-responsive">
+                <table class="table table-striped table-borderless main__resultados--tabla--datos">
+                    <thead>
+                        <tr>
+                            <th scope="col">Posicion</th>
+                            <th scope="col">Piloto</th>
+                            <th scope="col">Posicion de Salida</th>
+                            <th scope="col">Tiempo</th>
+                            <th scope="col">Puntos</th>
+                            <th scope="col">Vuelta Rapida</th>
+                        </tr>
+                    </thead>
+                    <tbody class="cuerpo--tabla">
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Max Verstappen</td>
+                            <td>1º</td>
+                            <td>1:33:56.736</td>
+                            <td>25</td>
+                            <td>1:36.236</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Sergio Perez</td>
+                            <td>2º</td>
+                            <td>+11.987s</td>
+                            <td>18</td>
+                            <td>1:36.344</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Fernando Alonso</td>
+                            <td>5º</td>
+                            <td>+38.637s</td>
+                            <td>15</td>
+                            <td>1:36.156</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Carlos Sainz</td>
+                            <td>4º</td>
+                            <td>+48.052s</td>
+                            <td>12</td>
+                            <td>1:37.130</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>Lewis Hamilton</td>
+                            <td>7º</td>
+                            <td>+50.977s</td>
+                            <td>10</td>
+                            <td>1:36.546</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td>Lance Stroll</td>
+                            <td>8º</td>
+                            <td>+54.502s</td>
+                            <td>8</td>
+                            <td>1:36.456</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">7</th>
+                            <td>George Russell</td>
+                            <td>6º</td>
+                            <td>+55.873s</td>
+                            <td>6</td>
+                            <td>1:37.221</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">8</th>
+                            <td>Valtteri bottas</td>
+                            <td>12º</td>
+                            <td>+72.647s</td>
+                            <td>4</td>
+                            <td>1:37.379</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">9</th>
+                            <td>Pierre Gasly</td>
+                            <td>20º</td>
+                            <td>+73.753s</td>
+                            <td>2</td>
+                            <td>1:35.068</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">10</th>
+                            <td>Alexander Albon</td>
+                            <td>15º</td>
+                            <td>+89.774s</td>
+                            <td>1</td>
+                            <td>1:37.144</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">11</th>
+                            <td>Yuki Tsunoda</td>
+                            <td>14º</td>
+                            <td>+90.870s</td>
+                            <td>0</td>
+                            <td>1:36.637</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">12</th>
+                            <td>Logan Sargeant</td>
+                            <td>16º</td>
+                            <td>+1 Vuelta</td>
+                            <td>0</td>
+                            <td>1:36.037</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">13</th>
+                            <td>Kevin Magnussen</td>
+                            <td>17º</td>
+                            <td>+1 Vuelta</td>
+                            <td>0</td>
+                            <td>1:36.471</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">14</th>
+                            <td>Nick De Vries</td>
+                            <td>19º</td>
+                            <td>+1 Vuelta</td>
+                            <td>0</td>
+                            <td>1:37.709</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">15</th>
+                            <td>Nico Hulkenberg</td>
+                            <td>10º</td>
+                            <td>+1 Vuelta</td>
+                            <td>0</td>
+                            <td>1:36.616</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">16</th>
+                            <td>Zhou Guanyu</td>
+                            <td>13º</td>
+                            <td>+1 Vuelta</td>
+                            <td>0</td>
+                            <td class="vueltaRapida">1:33.996</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">17</th>
+                            <td>Lando Norris</td>
+                            <td>11º</td>
+                            <td>+2 Vueltas</td>
+                            <td>0</td>
+                            <td>1:35.822</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">DNF</th>
+                            <td>Esteban ocon</td>
+                            <td>9º</td>
+                            <td>DNF</td>
+                            <td>0</td>
+                            <td>1:36.797</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">DNF</th>
+                            <td>Charles Leclerc</td>
+                            <td>3º</td>
+                            <td>DNF</td>
+                            <td>0</td>
+                            <td>1:37.170</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">DNF</th>
+                            <td>Oscar Piastri</td>
+                            <td>18º</td>
+                            <td>DNF</td>
+                            <td>0</td>
+                            <td>1:40.691</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </article>
+        <!-- CARRERA AUSTRALIA -->
+        <article class="main__resultados">
+            <section class="main__resultados--circuitName bgAustralia" id="australia">
+                <div class="main__resultados--circuitName--text">
+                    <h3>Australia</h3>
+                </div>
+
+                <div class="main__resultados--circuitName--img">
+                    <img src=".././assets/imgs/australia--bandera.png" alt="Bandera de Australia" title="Bandera de Australia"> 
+                </div>
+            </section>
+
+            <section class="main__resultados--tabla table-responsive">
+                <table class="table table-striped table-borderless main__resultados--tabla--datos">
+                    <thead>
+                        <tr>
+                            <th scope="col">Posicion</th>
+                            <th scope="col">Piloto</th>
+                            <th scope="col">Posicion de Salida</th>
+                            <th scope="col">Tiempo</th>
+                            <th scope="col">Puntos</th>
+                            <th scope="col">Vuelta Rapida</th>
+                        </tr>
+                    </thead>
+                    <tbody class="cuerpo--tabla">
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Max Verstappen</td>
+                            <td>1º</td>
+                            <td>1:33:56.736</td>
+                            <td>25</td>
+                            <td>1:36.236</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Sergio Perez</td>
+                            <td>2º</td>
+                            <td>+11.987s</td>
+                            <td>18</td>
+                            <td>1:36.344</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Fernando Alonso</td>
+                            <td>5º</td>
+                            <td>+38.637s</td>
+                            <td>15</td>
+                            <td>1:36.156</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Carlos Sainz</td>
+                            <td>4º</td>
+                            <td>+48.052s</td>
+                            <td>12</td>
+                            <td>1:37.130</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>Lewis Hamilton</td>
+                            <td>7º</td>
+                            <td>+50.977s</td>
+                            <td>10</td>
+                            <td>1:36.546</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td>Lance Stroll</td>
+                            <td>8º</td>
+                            <td>+54.502s</td>
+                            <td>8</td>
+                            <td>1:36.456</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">7</th>
+                            <td>George Russell</td>
+                            <td>6º</td>
+                            <td>+55.873s</td>
+                            <td>6</td>
+                            <td>1:37.221</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">8</th>
+                            <td>Valtteri bottas</td>
+                            <td>12º</td>
+                            <td>+72.647s</td>
+                            <td>4</td>
+                            <td>1:37.379</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">9</th>
+                            <td>Pierre Gasly</td>
+                            <td>20º</td>
+                            <td>+73.753s</td>
+                            <td>2</td>
+                            <td>1:35.068</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">10</th>
+                            <td>Alexander Albon</td>
+                            <td>15º</td>
+                            <td>+89.774s</td>
+                            <td>1</td>
+                            <td>1:37.144</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">11</th>
+                            <td>Yuki Tsunoda</td>
+                            <td>14º</td>
+                            <td>+90.870s</td>
+                            <td>0</td>
+                            <td>1:36.637</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">12</th>
+                            <td>Logan Sargeant</td>
+                            <td>16º</td>
+                            <td>+1 Vuelta</td>
+                            <td>0</td>
+                            <td>1:36.037</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">13</th>
+                            <td>Kevin Magnussen</td>
+                            <td>17º</td>
+                            <td>+1 Vuelta</td>
+                            <td>0</td>
+                            <td>1:36.471</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">14</th>
+                            <td>Nick De Vries</td>
+                            <td>19º</td>
+                            <td>+1 Vuelta</td>
+                            <td>0</td>
+                            <td>1:37.709</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">15</th>
+                            <td>Nico Hulkenberg</td>
+                            <td>10º</td>
+                            <td>+1 Vuelta</td>
+                            <td>0</td>
+                            <td>1:36.616</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">16</th>
+                            <td>Zhou Guanyu</td>
+                            <td>13º</td>
+                            <td>+1 Vuelta</td>
+                            <td>0</td>
+                            <td class="vueltaRapida">1:33.996</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">17</th>
+                            <td>Lando Norris</td>
+                            <td>11º</td>
+                            <td>+2 Vueltas</td>
+                            <td>0</td>
+                            <td>1:35.822</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">DNF</th>
+                            <td>Esteban ocon</td>
+                            <td>9º</td>
+                            <td>DNF</td>
+                            <td>0</td>
+                            <td>1:36.797</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">DNF</th>
+                            <td>Charles Leclerc</td>
+                            <td>3º</td>
+                            <td>DNF</td>
+                            <td>0</td>
+                            <td>1:37.170</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">DNF</th>
+                            <td>Oscar Piastri</td>
+                            <td>18º</td>
+                            <td>DNF</td>
+                            <td>0</td>
+                            <td>1:40.691</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </article>
+        <!-- CARRERA BAKU -->
+        <article class="main__resultados">
+            <section class="main__resultados--circuitName bgBaku" id="baku">
+                <div class="main__resultados--circuitName--text">
+                    <h3>Baku</h3>
+                </div>
+
+                <div class="main__resultados--circuitName--img">
+                    <img src=".././assets/imgs/azerbaijan--bandera.png" alt="Bandera de Azerbaijan" title="Bandera de Azerbaijan">
+                </div>
+            </section>
+
+            <section class="main__resultados--tabla table-responsive">
+                <table class="table table-striped table-borderless main__resultados--tabla--datos">
+                    <thead>
+                        <tr>
+                            <th scope="col">Posicion</th>
+                            <th scope="col">Piloto</th>
+                            <th scope="col">Posicion de Salida</th>
+                            <th scope="col">Tiempo</th>
+                            <th scope="col">Puntos</th>
+                            <th scope="col">Vuelta Rapida</th>
+                        </tr>
+                    </thead>
+                    <tbody class="cuerpo--tabla">
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Max Verstappen</td>
+                            <td>1º</td>
+                            <td>1:33:56.736</td>
+                            <td>25</td>
+                            <td>1:36.236</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Sergio Perez</td>
+                            <td>2º</td>
+                            <td>+11.987s</td>
+                            <td>18</td>
+                            <td>1:36.344</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Fernando Alonso</td>
+                            <td>5º</td>
+                            <td>+38.637s</td>
+                            <td>15</td>
+                            <td>1:36.156</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Carlos Sainz</td>
+                            <td>4º</td>
+                            <td>+48.052s</td>
+                            <td>12</td>
+                            <td>1:37.130</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>Lewis Hamilton</td>
+                            <td>7º</td>
+                            <td>+50.977s</td>
+                            <td>10</td>
+                            <td>1:36.546</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td>Lance Stroll</td>
+                            <td>8º</td>
+                            <td>+54.502s</td>
+                            <td>8</td>
+                            <td>1:36.456</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">7</th>
+                            <td>George Russell</td>
+                            <td>6º</td>
+                            <td>+55.873s</td>
+                            <td>6</td>
+                            <td>1:37.221</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">8</th>
+                            <td>Valtteri bottas</td>
+                            <td>12º</td>
+                            <td>+72.647s</td>
+                            <td>4</td>
+                            <td>1:37.379</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">9</th>
+                            <td>Pierre Gasly</td>
+                            <td>20º</td>
+                            <td>+73.753s</td>
+                            <td>2</td>
+                            <td>1:35.068</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">10</th>
+                            <td>Alexander Albon</td>
+                            <td>15º</td>
+                            <td>+89.774s</td>
+                            <td>1</td>
+                            <td>1:37.144</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">11</th>
+                            <td>Yuki Tsunoda</td>
+                            <td>14º</td>
+                            <td>+90.870s</td>
+                            <td>0</td>
+                            <td>1:36.637</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">12</th>
+                            <td>Logan Sargeant</td>
+                            <td>16º</td>
+                            <td>+1 Vuelta</td>
+                            <td>0</td>
+                            <td>1:36.037</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">13</th>
+                            <td>Kevin Magnussen</td>
+                            <td>17º</td>
+                            <td>+1 Vuelta</td>
+                            <td>0</td>
+                            <td>1:36.471</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">14</th>
+                            <td>Nick De Vries</td>
+                            <td>19º</td>
+                            <td>+1 Vuelta</td>
+                            <td>0</td>
+                            <td>1:37.709</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">15</th>
+                            <td>Nico Hulkenberg</td>
+                            <td>10º</td>
+                            <td>+1 Vuelta</td>
+                            <td>0</td>
+                            <td>1:36.616</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">16</th>
+                            <td>Zhou Guanyu</td>
+                            <td>13º</td>
+                            <td>+1 Vuelta</td>
+                            <td>0</td>
+                            <td class="vueltaRapida">1:33.996</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">17</th>
+                            <td>Lando Norris</td>
+                            <td>11º</td>
+                            <td>+2 Vueltas</td>
+                            <td>0</td>
+                            <td>1:35.822</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">DNF</th>
+                            <td>Esteban ocon</td>
+                            <td>9º</td>
+                            <td>DNF</td>
+                            <td>0</td>
+                            <td>1:36.797</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">DNF</th>
+                            <td>Charles Leclerc</td>
+                            <td>3º</td>
+                            <td>DNF</td>
+                            <td>0</td>
+                            <td>1:37.170</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">DNF</th>
+                            <td>Oscar Piastri</td>
+                            <td>18º</td>
+                            <td>DNF</td>
+                            <td>0</td>
+                            <td>1:40.691</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </article>
+        <!-- CARRERA MIAMI -->
+        <article class="main__resultados">
+            <section class="main__resultados--circuitName bgMiami" id="miami">
+                <div class="main__resultados--circuitName--text">
+                    <h3>Miami</h3>
+                </div>
+
+                <div class="main__resultados--circuitName--img">
+                    <img src=".././assets/imgs/usa--bandera.png" alt="Bandera de Estados Unidos" title="Bandera de Estados Unidos">
+                </div>
+            </section>
+
+            <section class="main__resultados--tabla table-responsive">
+                <table class="table table-striped table-borderless main__resultados--tabla--datos">
+                    <thead>
+                        <tr>
+                            <th scope="col">Posicion</th>
+                            <th scope="col">Piloto</th>
+                            <th scope="col">Posicion de Salida</th>
+                            <th scope="col">Tiempo</th>
+                            <th scope="col">Puntos</th>
+                            <th scope="col">Vuelta Rapida</th>
+                        </tr>
+                    </thead>
+                    <tbody class="cuerpo--tabla">
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Max Verstappen</td>
+                            <td>1º</td>
+                            <td>1:33:56.736</td>
+                            <td>25</td>
+                            <td>1:36.236</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Sergio Perez</td>
+                            <td>2º</td>
+                            <td>+11.987s</td>
+                            <td>18</td>
+                            <td>1:36.344</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Fernando Alonso</td>
+                            <td>5º</td>
+                            <td>+38.637s</td>
+                            <td>15</td>
+                            <td>1:36.156</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Carlos Sainz</td>
+                            <td>4º</td>
+                            <td>+48.052s</td>
+                            <td>12</td>
+                            <td>1:37.130</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>Lewis Hamilton</td>
+                            <td>7º</td>
+                            <td>+50.977s</td>
+                            <td>10</td>
+                            <td>1:36.546</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td>Lance Stroll</td>
+                            <td>8º</td>
+                            <td>+54.502s</td>
+                            <td>8</td>
+                            <td>1:36.456</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">7</th>
+                            <td>George Russell</td>
+                            <td>6º</td>
+                            <td>+55.873s</td>
+                            <td>6</td>
+                            <td>1:37.221</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">8</th>
+                            <td>Valtteri bottas</td>
+                            <td>12º</td>
+                            <td>+72.647s</td>
+                            <td>4</td>
+                            <td>1:37.379</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">9</th>
+                            <td>Pierre Gasly</td>
+                            <td>20º</td>
+                            <td>+73.753s</td>
+                            <td>2</td>
+                            <td>1:35.068</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">10</th>
+                            <td>Alexander Albon</td>
+                            <td>15º</td>
+                            <td>+89.774s</td>
+                            <td>1</td>
+                            <td>1:37.144</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">11</th>
+                            <td>Yuki Tsunoda</td>
+                            <td>14º</td>
+                            <td>+90.870s</td>
+                            <td>0</td>
+                            <td>1:36.637</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">12</th>
+                            <td>Logan Sargeant</td>
+                            <td>16º</td>
+                            <td>+1 Vuelta</td>
+                            <td>0</td>
+                            <td>1:36.037</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">13</th>
+                            <td>Kevin Magnussen</td>
+                            <td>17º</td>
+                            <td>+1 Vuelta</td>
+                            <td>0</td>
+                            <td>1:36.471</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">14</th>
+                            <td>Nick De Vries</td>
+                            <td>19º</td>
+                            <td>+1 Vuelta</td>
+                            <td>0</td>
+                            <td>1:37.709</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">15</th>
+                            <td>Nico Hulkenberg</td>
+                            <td>10º</td>
+                            <td>+1 Vuelta</td>
+                            <td>0</td>
+                            <td>1:36.616</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">16</th>
+                            <td>Zhou Guanyu</td>
+                            <td>13º</td>
+                            <td>+1 Vuelta</td>
+                            <td>0</td>
+                            <td class="vueltaRapida">1:33.996</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">17</th>
+                            <td>Lando Norris</td>
+                            <td>11º</td>
+                            <td>+2 Vueltas</td>
+                            <td>0</td>
+                            <td>1:35.822</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">DNF</th>
+                            <td>Esteban ocon</td>
+                            <td>9º</td>
+                            <td>DNF</td>
+                            <td>0</td>
+                            <td>1:36.797</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">DNF</th>
+                            <td>Charles Leclerc</td>
+                            <td>3º</td>
+                            <td>DNF</td>
+                            <td>0</td>
+                            <td>1:37.170</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">DNF</th>
+                            <td>Oscar Piastri</td>
+                            <td>18º</td>
+                            <td>DNF</td>
+                            <td>0</td>
+                            <td>1:40.691</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </article>
+        <!-- CARRERA IMOLA -->
+        <article class="main__resultados">
+            <section class="main__resultados--circuitName bgImola" id="imola">
+                <div class="main__resultados--circuitName--text">
+                    <h3>Imola</h3>
+                    <h3 class="suspendida">SUSPENDIDA</h3>
+                </div>
+
+                <div class="main__resultados--circuitName--img ">
+                    <img src=".././assets/imgs/italia--bandera.png" alt="Bandera de Italia" title="Bandera de Italia">
+                </div>
+            </section>
+
+            <section class="main__resultados--tabla table-responsive carreraDisabled">
+                <table class="table table-striped table-borderless main__resultados--tabla--datos">
+                    <thead>
+                        <tr>
+                            <th scope="col">Posicion</th>
+                            <th scope="col">Piloto</th>
+                            <th scope="col">Posicion de Salida</th>
+                            <th scope="col">Tiempo</th>
+                            <th scope="col">Puntos</th>
+                            <th scope="col">Vuelta Rapida</th>
+                        </tr>
+                    </thead>
+                    <tbody class="cuerpo--tabla">
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">7</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">8</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">9</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">10</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">11</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">12</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">13</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">14</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">15</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">16</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">17</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">18</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">19</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">20</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </article>
+        <!-- CARRERA MONACO -->
+        <article class="main__resultados carreraDisabled">
+            <section class="main__resultados--circuitName bgMonaco" id="monaco">
+                <div class="main__resultados--circuitName--text">
+                    <h3>Monaco</h3>
+                </div>
+
+                <div class="main__resultados--circuitName--img">
+                    <img src=".././assets/imgs/monaco--bandera.png" alt="Bandera de Monaco" title="Bandera de Monaco">
+                </div>
+            </section>
+
+            <section class="main__resultados--tabla table-responsive">
+                <table class="table table-striped table-borderless main__resultados--tabla--datos">
+                    <thead>
+                        <tr>
+                            <th scope="col">Posicion</th>
+                            <th scope="col">Piloto</th>
+                            <th scope="col">Posicion de Salida</th>
+                            <th scope="col">Tiempo</th>
+                            <th scope="col">Puntos</th>
+                            <th scope="col">Vuelta Rapida</th>
+                        </tr>
+                    </thead>
+                    <tbody class="cuerpo--tabla">
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">7</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">8</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">9</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">10</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">11</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">12</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">13</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">14</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">15</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">16</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">17</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">18</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">19</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">20</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
                         </tr>
                     </tbody>
                 </table>

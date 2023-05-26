@@ -1,86 +1,143 @@
 /* *====================== MAIN PAGINA RESULTADOS ======================= */
-.main__select{
+.mainResultadosPage{
     display: flex;
-    margin-bottom: 2rem;
-    justify-content: center;
-
-    .main__select--title{
-        padding-right: 2rem;
-    }
-    .main__select--selector{
-        width: 15%;
-        padding: 0.3rem;
-    }
-}
-
-.main__resultados{
-    width: 90%;
-    margin: auto;
-    margin-bottom: 5%;
-    display: grid;
-    grid-template-columns: 20% 80%;
-    grid-template-areas: 
-    "circuit posTable"
-    ;
-    border: solid 0.2rem red;
-    border-radius: 1rem;
-    filter: brightness(30%);
-    transition: linear 0.2s;
-    &:hover{
-        box-shadow: 0 0 15px 3px red;
-        filter: brightness(100%);
-    }
-    
-    .main__resultados--circuitName{
-        grid-area: circuit;
-        background-image: url("../assets/imgs/bahrein--circuit.jpg");
-        background-position: center;
-        background-size: cover;
+    flex-direction: column;
+    .main__select{
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border-top-left-radius: 0.8rem;
-        border-bottom-left-radius: 0.8rem;
-
-        .main__resultados--circuitName--text{
-            margin: 1rem;
-            text-align: center;
-            & h3{
-                color: white;
-                font-style: italic;
-                font-size: 2rem;
-            }
+        margin-bottom: 2rem;
+        text-align: center;
+    
+        .main__select--title--text{
+            margin: 1%;
         }
-
-        .main__resultados--circuitName--img{
-            justify-content: center;
-            text-align: center;
-            & img{
-                width: 50%;
-                border-radius: 1rem;
+        .main__select--carrera{
+            display: flex;
+            flex-wrap: wrap;
+            padding: 1rem;
+            justify-content: space-evenly;
+            .main__select--carrera--flag{
+                width: 10%;
+                & a{
+                    & img{
+                        width: 100%;
+                        border-radius: 0.5rem;
+                        box-shadow: 0 0 15px 0.1px black;
+                        transition: linear 0.2s;
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+                & h5{
+                    margin-top: 0.5rem;
+                    font-size: 1rem;
+                }
+                & h6{
+                    font-size: 0.8rem;
+                }
             }
         }
     }
-
-    .main__resultados--tabla{
-        grid-area: posTable;
-
-        .main__resultados--tabla--datos{
-            text-align: center;
-            margin: 0;
-            & thead{
-                color: red;
-                vertical-align: middle;
+    
+    .main__resultados{
+        width: 90%;
+        height: 90vh;
+        margin: auto;
+        margin-bottom: 5%;
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-areas: 
+        "circuit posTable"
+        ;
+        border: solid 0.2rem red;
+        border-radius: 1rem;
+        box-shadow: 0 0 15px 3px red;
+        
+        .main__resultados--circuitName{
+            grid-area: circuit;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-top-left-radius: 0.8rem;
+            border-bottom-left-radius: 0.8rem;
+    
+            .main__resultados--circuitName--text{
+                margin: 1rem;
+                text-align: center;
+                & h3{
+                    color: white;
+                    font-style: italic;
+                    font-size: 2rem;
+                }
+                .suspendida{
+                    color: red;
+                }
             }
-
-            & tbody{
-                vertical-align: middle;
-            }
-
-            .vueltaRapida{
-                color: rgba(171, 39, 204);
+    
+            .main__resultados--circuitName--img{
+                justify-content: center;
+                text-align: center;
+                & img{
+                    width: 50%;
+                    border-radius: 1rem;
+                }
             }
         }
+
+        .main__resultados--tabla{
+            grid-area: posTable;
+            &::-webkit-scrollbar{
+                width: 0.8rem;
+            }
+            &::-webkit-scrollbar-thumb{
+                background-color: red;
+                border-radius: 1rem;
+            }
+            .main__resultados--tabla--datos{
+                text-align: center;
+                margin: 0;
+                & thead{
+                    color: red;
+                    vertical-align: middle;
+                }
+                & tbody{
+                    vertical-align: middle;
+                }
+                .vueltaRapida{
+                    color: rgba(171, 39, 204);
+                }
+            }
+        }
+
+        /* fondos segun carrera */
+        .bgBahrein{
+            background-image: url("../assets/imgs/bahrein--circuit.jpg");
+        }
+        .bgArabia{
+            background-image: url("../assets/imgs/jeddah--circuit.jpg");
+        }
+        .bgAustralia{
+            background-image: url("../assets/imgs/melbourne--circuit.jpg");
+        }
+        .bgBaku{
+            background-image: url("../assets/imgs/baku--circuit.jpg");
+        }
+        .bgMiami{
+            background-image: url("../assets/imgs/miami--circuit.jpg");
+        }
+        .bgImola{
+            background-image: url("../assets/imgs/imola--circuit.jpg");
+        }
+        .bgMonaco{
+            background-image: url("../assets/imgs/monaco--circuit.jpg");
+        }
+    }
+
+    .carreraDisabled{
+        filter: brightness(30%);
     }
 }
