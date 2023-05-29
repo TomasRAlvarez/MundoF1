@@ -94,6 +94,9 @@
             }
             & tbody{
                 font-size: 0.84rem;
+                .shortName{
+                    display: none;
+                }
             } 
         }
     }
