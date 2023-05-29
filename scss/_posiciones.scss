@@ -3,28 +3,25 @@
     width: 90%;
     display: flex;
     margin: auto;
-    
-    /* TABLA CAMPEONATO PILOTOS */
-    .main__posiciones__tabla--pilotos{
-        width: 60%;
+    /* estilos en comun de ambas tablas */
+    .main__posiciones__tablaStyle{
+        height: min-content;
         border: solid 0.2rem red;
         border-radius: 1rem;
-        padding: 0.5rem;
         margin: 1%;
         display: flex;
         flex-direction: column;
+    }
+    /* TABLA CAMPEONATO PILOTOS */
+    .main__posiciones__tabla--pilotos{
+        width: 60%;
+        padding: 0.5rem;
     }
     
     /* TABLA CAMPEONATO CONSTRUCTORES */
     .main__posiciones__tabla--constructores{
         width: 40%;
-        height: 50%;
-        border: solid 0.2rem red;
-        border-radius: 1rem;
         padding: 1rem;
-        margin: 1%;
-        display: flex;
-        flex-direction: column;
     }
 
     .tablaPos{

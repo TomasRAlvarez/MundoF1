@@ -266,18 +266,13 @@
     /* =====================resultados */
     .mainResultadosPage{
         .main__select{
-            margin-bottom: 0;
-            overflow-y: scroll;
+
             .main__select--title{
-                width: 100%;
-                position: absolute;
                 .main__select--title--text{
                     font-size: 1.3rem;
                 }
             }
             .main__select--carrera{
-                margin-top: 5%;
-                width: max-content;
                 .main__select--carrera--flag{
                     margin-right: 1rem;
                     width: 70px;

@@ -23,3 +23,46 @@ body{
     background-color: rgb(251, 251, 255);
     font-family: "Formula1-RegularFont";
 }
+
+/* Estilos de pagina 404 */
+.main__404{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 100vh;
+    .main__404--info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin: 5%;
+        .main__404--info--link{
+            align-self: flex-end;
+            & a{
+                & button{
+                    padding: 1rem;
+                    background-color: red;
+                    color: white;
+                    border-radius: 1rem;
+                    transition: linear 0.2s;
+                    & span{
+                        display: none;
+                        padding-right: 1rem;
+                    }
+                    &:hover{
+                        padding-left: 1.5rem;
+                    }
+                    &:hover > span{
+                        display: inline;
+                    }
+                }
+            }
+        }
+        .main__404--img{
+            width: 100%;
+            .main__404--imgStyle{
+                width: 80%;
+            }
+        }
+    }
+}
