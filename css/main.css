@@ -417,7 +417,8 @@ footer .footer__redes .footer__redes--img:hover {
   overflow-x: scroll;
 }
 .mainResultadosPage .main__select::-webkit-scrollbar {
-  height: 0.2rem;
+  height: 0.5rem;
+  border: solid black 0.5rem;
 }
 .mainResultadosPage .main__select::-webkit-scrollbar-thumb {
   background-color: red;

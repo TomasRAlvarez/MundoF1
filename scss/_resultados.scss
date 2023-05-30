@@ -9,7 +9,8 @@
         text-align: center;
         overflow-x: scroll;
         &::-webkit-scrollbar{
-            height: 0.2rem;
+            height: 0.5rem;
+            border: solid black 0.5rem;
         }
         &::-webkit-scrollbar-thumb{
             background-color: red;
