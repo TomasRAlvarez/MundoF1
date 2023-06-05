@@ -567,6 +567,9 @@ footer .footer__redes .footer__redes--img:hover {
 .mainResultadosPage .main__resultados .bgMonaco {
   background-image: url("../assets/imgs/monaco--circuit.jpg");
 }
+.mainResultadosPage .main__resultados .bgEspania {
+  background-image: url("../assets/imgs/espania--circuit.jpg");
+}
 .mainResultadosPage .carreraDisabled {
   -webkit-filter: brightness(30%);
           filter: brightness(30%);
