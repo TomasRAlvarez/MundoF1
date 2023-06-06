@@ -443,6 +443,10 @@ footer .footer__redes .footer__redes--img:hover {
   width: -moz-max-content;
   width: max-content;
   margin-top: 5%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .mainResultadosPage .main__select .main__select--carrera .main__select--carrera--flag {
   margin-right: 1rem;
