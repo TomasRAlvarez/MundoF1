@@ -23,6 +23,10 @@ body {
   font-family: "Formula1-RegularFont";
 }
 
+.shortName {
+  display: none;
+}
+
 /* Estilos de pagina 404 */
 .main__404 {
   display: -webkit-box;
@@ -219,9 +223,6 @@ header .header__navbar .header__navbar__list .paginaActual {
 }
 .principal .principal__tabla .principal__tabla--table tbody {
   font-size: 0.84rem;
-}
-.principal .principal__tabla .principal__tabla--table tbody .shortName {
-  display: none;
 }
 
 /* *========= ESTILOS FOOTER ========= */
@@ -747,6 +748,13 @@ footer .footer__redes .footer__redes--img:hover {
   footer .footer__info .footer__redes--img:hover { /* uso este width para "cancelar" el hover */
     width: 3.6rem;
   }
+  /* =====================general */
+  .longName {
+    display: none;
+  }
+  .shortName {
+    display: inline;
+  }
   /* =====================index */
   .principal .principal__noticias .principal__noticias--contenedor {
     grid-template-areas: "title    title    img" "descript descript descript";
@@ -767,12 +775,6 @@ footer .footer__redes .footer__redes--img:hover {
   .principal .principal__tabla .principal__tabla--table tbody {
     font-size: 0.7rem;
     vertical-align: middle;
-  }
-  .principal .principal__tabla .principal__tabla--table tbody .longName {
-    display: none;
-  }
-  .principal .principal__tabla .principal__tabla--table tbody .shortName {
-    display: inline;
   }
   /* =====================noticias */
   .main__noticias {

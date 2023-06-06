@@ -87,6 +87,14 @@
             }
         }
     }
+    
+    /* =====================general */
+    .longName{
+        display: none;
+    }
+    .shortName{
+        display: inline;
+    }
 
     /* =====================index */
     .principal{
@@ -115,12 +123,6 @@
             .principal__tabla--table tbody{
                 font-size: 0.7rem;
                 vertical-align: middle;
-                .longName{
-                    display: none;
-                }
-                .shortName{
-                    display: inline;
-                }
             }
         }
     }
