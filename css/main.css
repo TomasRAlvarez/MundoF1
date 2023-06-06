@@ -806,6 +806,10 @@ footer .footer__redes .footer__redes--img:hover {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .mainResultadosPage .main__resultados .main__resultados--tabla::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
   .mainResultadosPage .main__resultados .main__resultados--circuitName {
     border-top-left-radius: 0.8rem;
     border-top-right-radius: 0.8rem;
@@ -1043,9 +1047,6 @@ footer .footer__redes .footer__redes--img:hover {
   .mainResultadosPage .main__resultados .main__resultados--circuitName .main__resultados--circuitName--img img {
     border-radius: 0.5rem;
   }
-  .mainResultadosPage .main__resultados .main__resultados--tabla::-webkit-scrollbar {
-    height: 0.8rem;
-  }
   .mainResultadosPage .main__resultados .main__resultados--tabla .main__resultados--tabla--datos thead {
     font-size: 0.8rem;
   }
@@ -1083,13 +1084,6 @@ footer .footer__redes .footer__redes--img:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-}
-/* ------------MOBILE M------------ */
-@media screen and (max-width: 375px) {
-  /* =====================resultados */
-  .main__select {
-    margin: 5%;
   }
 }
 /* ------------MOBILE S------------ */

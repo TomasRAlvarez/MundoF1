@@ -167,6 +167,13 @@
             display: flex;
             flex-direction: column;
 
+            .main__resultados--tabla{
+                &::-webkit-scrollbar{
+                    width: 0.5rem;
+                    height: 0.5rem;
+                }
+            }
+
             .main__resultados--circuitName{
                 border-top-left-radius: 0.8rem;
                 border-top-right-radius: 0.8rem;
@@ -443,7 +450,6 @@
     /* =====================resultados */
     .mainResultadosPage{
         .main__select{
-
             .main__select--title{
                 .main__select--title--text{
                     font-size: 1.3rem;
@@ -479,9 +485,6 @@
                 }
             }
             .main__resultados--tabla{
-                &::-webkit-scrollbar{
-                    height: 0.8rem;
-                }
                 .main__resultados--tabla--datos{
                     & thead{
                         font-size: 0.8rem;
@@ -526,15 +529,6 @@
     .main__404{
         width: 100%;
         flex-direction: column;
-    }
-}
-
-
-/* ------------MOBILE M------------ */
-@media screen and (max-width: 375px){
-    /* =====================resultados */
-    .main__select{
-        margin: 5%;
     }
 }
 
